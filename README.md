@@ -7,6 +7,7 @@ _Disciplina de Laboratório de Software 2020/2 (UNIRITTER)_
 Grupo: *Eduardo Bujak, Kathleen Alves e Lucas Reis*
 
 Organização das Sprints: [Trello do Grupo](https://trello.com/b/gMLWFcuL/prescri%C3%A7%C3%A3o-m%C3%A9dica)
+Repositório de Backend: [precrimed-backend](https://github.com/kdalves/prescrimed-backend)
 
 ## Sumário
 * [Sobre o Projeto](#sobre-o-projeto)
