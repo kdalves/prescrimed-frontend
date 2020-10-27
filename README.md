@@ -1,4 +1,4 @@
-![](~public/images/prescrição-médica-digital.jpg)
+![](public/images/prescrição-médica-digital.jpg)
 
 # PrescriMed
 _Disciplina de Laboratório de Software 2020/2 (UNIRITTER)_
