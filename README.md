@@ -19,7 +19,7 @@ Repositório de Backend: [prescrimed-backend](https://github.com/kdalves/prescri
 ## Sobre o projeto
 O Prescrimed é um sistema web que auxilia aos médicos a receitar uma prescrição médica de uma forma totalmente online.
 
-[Link para o Trabalho de Conclusão de Curso (parte escrita)](https://docs.google.com/document/d/1MPuaZft-VmtVFfSRwWWfKI7wRUmH9VSNEW2N_HstR2U/edit?usp=sharing)
+[Trabalho de Conclusão de Curso (parte escrita)](https://docs.google.com/document/d/1MPuaZft-VmtVFfSRwWWfKI7wRUmH9VSNEW2N_HstR2U/edit?usp=sharing)
 
 ## Protótipo do Sistema
 [Telas do PrescriMed](https://xd.adobe.com/view/9083291f-f316-40a7-899c-b4f2a2964e8a-c5d0/?fullscreen)
