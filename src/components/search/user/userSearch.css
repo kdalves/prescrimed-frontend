@@ -1,0 +1,20 @@
+.user-search-input{
+    display: flex;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+   
+}
+
+.button-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+}

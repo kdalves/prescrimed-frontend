@@ -1,0 +1,34 @@
+.app-sidebar{
+   width: 150px;
+   background-color: #DCF2FF;
+   padding: 80px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+.app-sidebar img{
+    height: 70px;
+}
+
+.app-sidebar p{
+    line-height: 20px ;
+    margin-top:10px;
+}
+
+.app-sidebar{
+display: flex;
+}
+
+.app-sidebar header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.userIcon, .medicIcon{
+    margin-left: 15px;
+}

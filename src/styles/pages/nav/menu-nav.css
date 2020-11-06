@@ -1,0 +1,41 @@
+#page-nav{
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+    
+}
+#app-sidebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-nav aside{
+   width: 150px;
+   background-color: #DCF2FF;
+   padding: 80px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+#page-nav img{
+    height: 70px;
+}
+
+#page-nav p{
+    line-height: 20px ;
+    margin-top:10px;
+}
+
+#app-sidebar header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
