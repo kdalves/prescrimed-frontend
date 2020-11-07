@@ -1,0 +1,45 @@
+.medicine-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-style: solid;
+    border-width: 2px ;
+    border-color: #D3E2E5;
+    padding: 30px;
+}
+.item{
+    margin-bottom: 2em;
+}
+
+.loupe-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.loupe-content input{
+    margin-right: 10px;
+}
+
+.exclue-medicine{
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    background-color: #b6b6b6;
+}
+.exclue-medicine:hover{
+    color: #636e70;
+    transition: 0.2s;
+}
+
+.button-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.loupe{
+    width: 22px;
+    height: 22px;
+}
