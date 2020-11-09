@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios'
 import '../../../styles/pages/users/users-registration.css';
 import PrescriptionSuggestedList from '../../prescriptionSuggestedList/PrescriptionSuggestedListComp';
+import api from '../../../services/api';
 
 const PrescriptionSuggestedSearch = () => {
     const [prescriptionsSuggested, setPrescriptionSuggested] = useState([]);
@@ -10,7 +10,7 @@ const PrescriptionSuggestedSearch = () => {
 
     useEffect(() => {
         const params = {};
-        axios.get('http://localhost:3333/protocolos', { params })
+        api.get('/protocolos', { params })
             .then((response) => {
                 setPrescriptionSuggested(response.data);
             });

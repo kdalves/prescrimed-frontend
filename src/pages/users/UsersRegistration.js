@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import axios from 'axios';
 import '../../styles/pages//users/users-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
+import api from '../../services/api';
 
 const initialValue = {
   "IdUsuario": 0,
@@ -33,7 +33,7 @@ export default function UserRegistration() {
     event.preventDefault(); //n aparecer dados no link
     //utilzar o axios para fazer um request
 
-    axios.post('http://localhost:3333/usuarios', values)
+    api.post('/usuarios', values)
       .then((response) => {
         history.push('/cadastroUsuarios')
       });

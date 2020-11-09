@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { useHistory, useParams } from "react-router-dom";
-import axios from 'axios';
 import '../../styles/pages/medics/medic-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
+import api from '../../services/api';
 
 const initialValue ={
   "IdUsuario": 0,
@@ -32,7 +32,7 @@ export default function MedicRegistrationNew() {
   function onSubmit(event){
     event.preventDefault(); 
   
-    axios.post('http://localhost:3333/profissionais', values) 
+    api.post('/profissionais', values) 
         .then((response) => {
             history.push('/listaMedicos')
         }); 

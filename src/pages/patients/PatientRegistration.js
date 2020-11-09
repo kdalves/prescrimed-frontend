@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import axios from 'axios';
 import '../../styles/pages/patients/patient-registration.css';
 import AllergySearch from '../../components/search/allergy/allergySearch';
 import Sidebar from '../../components/sidebar/Sidebar';
 import calcule from '../../images/ciclo.png';
+import api from '../../services/api';
 
 const initialValue = {
   "Nome": "",
@@ -42,7 +42,7 @@ export default function PatientRegistration() {
   function onSubmit(event){
     event.preventDefault();
 
-    axios.post('http://localhost:3333/pacientes', values)
+    api.post('/pacientes', values)
       .then((response) => {
         history.push('/listaPacientes')
       });

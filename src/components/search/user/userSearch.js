@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios'
 import '../../../styles/pages/users/users-registration.css';
 import UserList from '../../userList/UserListComp';
 import '../user/userSearch.css';
+import api from '../../../services/api';
 
 const UserSearch = () => {
 
@@ -15,7 +15,7 @@ const UserSearch = () => {
         if (search) {
             params.Nome_like = search;
         }
-        axios.get('http://localhost:3333/usuarios', { params })
+        api.get('/usuarios', { params })
             .then((response) => {
                 setUsers(response.data);
             });

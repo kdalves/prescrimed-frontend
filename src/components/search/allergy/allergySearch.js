@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios'
 import '../../../styles/pages/medics/medic-registration.css'; 
 import AllergyList from '../../allergyList/AllergyListComp';
 //import '../search/allergySearch.css';
+import api from '../../../services/api';
 
 
 const AllergySearch = () => {
@@ -18,7 +18,7 @@ const AllergySearch = () => {
             params.Nome_like = search;  
         }
        
-        axios.get('http://localhost:3333/alergias', { params }) 
+        api.get('alergias', { params }) 
             .then((response) => {
                 setAllergies(response.data);
             });
