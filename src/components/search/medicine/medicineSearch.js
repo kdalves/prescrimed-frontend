@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios'
 import '../../../styles/pages/medics/medic-registration.css';
 import MedicineList from '../../medicineList/MedicineListComp'
 //import '../search/allergySearch.css';
+import api from '../../../services/api';
 
 
 const MedicineSearch = () => {
@@ -18,7 +18,7 @@ const MedicineSearch = () => {
             params.Nome_like = search;  
         }
        
-        axios.get('http://localhost:3333/medicamentos', { params }) 
+        api.get('/medicamentos', { params }) 
             .then((response) => {
                 setMedicines(response.data);
             });

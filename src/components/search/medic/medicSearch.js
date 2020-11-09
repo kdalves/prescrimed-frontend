@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
-import axios from 'axios'
 import '../../../styles/pages/users/users-registration.css';
 import MedicList from '../../medicList/MedicListComp';
+import api from '../../../services/api';
 
 const MedicSearch = () =>{
     const [medics, setMedics] = useState([]);
@@ -14,7 +14,7 @@ const MedicSearch = () =>{
         if(search){
             params.Nome_like = search; 
         }
-      axios.get('http://localhost:3333/profissionais', { params }) 
+      api.get('/profissionais', { params }) 
       .then( (response) => {
         setMedics(response.data);
       });

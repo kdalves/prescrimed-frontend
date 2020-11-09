@@ -1,16 +1,10 @@
 import React, {useEffect, useState} from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
-import axios from 'axios';
 import { Table } from 'react-bootstrap';
 import '../../styles/pages/medicines/medicines-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
+import api from '../../services/api';
 
-// const initialValue ={
-//   cpf: '',
-//   nome: '',
-//   admin: '',
-//   status: ''
-// }
 const initialValue ={
   "IdUsuario": 0,
 	"Nome": "",
@@ -40,7 +34,7 @@ export default function MedicinesRegistration() {
     event.preventDefault(); //n aparecer dados no link
     //utilzar o axios para fazer um request
 
-    axios.post('http://localhost:3333/medicamentos', values)
+    api.post('/medicamentos', values)
         .then((response) => {
             history.push('/listaMedicos')
         }); //cria
