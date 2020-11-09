@@ -7,6 +7,7 @@ import CadastroPacientes from '../pages/patients/PatientRegistration';
 import CadastroUsuario from '../pages/users/UsersRegistration';
 import CadastroMedicamento from '../pages/medicines/MedicinesRegistration';
 import CadastroApresentacao from '../pages/medicines/apresentacao/ApresentacaoRegistration';
+import CadastroProntuario from '../pages/medicalRecord/MedicalRecord';
 import ListaMedicos from '../pages/medics/MedicList';
 import ListaPacientes from '../pages/patients/PatientList';
 import ListaMedicamentos from '../pages/medicines/MedicinesList';
@@ -24,6 +25,7 @@ function Routes(){
                 <Route path="/cadastroUsuarios" component={CadastroUsuario}/>
                 <Route path="/cadastroMedicamentos" component={CadastroMedicamento}/>
                 <Route path="/cadastroApresentacao" component={CadastroApresentacao}/>
+                <Route path="/cadastroProntuario" component={CadastroProntuario}/>
                 <Route path="/listaMedicos" component={ListaMedicos}/>
                 <Route path="/listaPacientes" component={ListaPacientes}/>
                 <Route path="/listaMedicamentos" component={ListaMedicamentos}/>
