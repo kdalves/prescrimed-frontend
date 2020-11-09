@@ -53,10 +53,10 @@ export default function MedicalRecord() {
                             Cancelar
                         </button>
                         <button className="confirm-button" type="submit">
-                            Gravar
+                            Salvar
                         </button>
                         <button className="confirm-button" type="submit">
-                            Gravar e Assinar
+                            Salvar e Assinar
                         </button>
                     </div>
 
