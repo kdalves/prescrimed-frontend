@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../styles/pages//nav/menu-nav.css'
+import '../../styles/pages/nav/menu-nav.css'
 import Sidebar from '../../components/sidebar/Sidebar';
 
 function NavBar() {
