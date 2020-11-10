@@ -35,7 +35,7 @@ export default function UserRegistration() {
 
     api.post('/usuarios', values)
       .then((response) => {
-        history.push('/cadastroUsuarios')
+        history.push('/listaUsuarios') 
       });
   }
 
