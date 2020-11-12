@@ -1,14 +1,19 @@
 .medicine-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     border-style: solid;
     border-width: 2px ;
     border-color: #D3E2E5;
     padding: 30px;
+    padding-right: 0;
 }
 .item{
     margin-bottom: 2em;
+}
+
+.medicine-content input{
+    width: 378px;
 }
 
 .loupe-content{
@@ -23,10 +28,11 @@
 }
 
 .exclue-medicine{
-    width: 100px;
-    border-radius: 5px;
+    width: 40px;
     border: none;
-    background-color: #b6b6b6;
+}
+.exclue-medicine .exclue-icon{
+    width: 25px;
 }
 .exclue-medicine:hover{
     color: #636e70;
@@ -35,7 +41,7 @@
 
 .button-content{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
 }
 

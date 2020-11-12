@@ -6,6 +6,7 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import AddMedicines from '../../components/medicalRecord/addMedicines';
 import MedicalRecordPatient from '../../components/medicalRecord/medicalRecordPatientList';
 import MedicalRecordPatientList from "../../components/medicalRecord/medicalRecordPatientList";
+import plusIcon from '../../images/plus.png';
 
 const initialValue = {
 
@@ -45,11 +46,19 @@ export default function MedicalRecord() {
                              </div>
                         </div>
                     </fieldset>
-                   
+                    <fieldset>
+                        <legend>Medicamento</legend>
+                        <div className="plus-content">
+                            <a> 
+                                <img className="plus-medicine" src={plusIcon}/> 
+                            </a>
+                        </div>
+                        
                     <AddMedicines />
-                    <button className="add-medicine" type="submit">Adicionar medicamento</button>
+                    </fieldset>
+                   
                     <div className="buttons-content">
-                        <button className="confirm-button" type="submit">
+                        <button className="confirm-button cancel" type="submit">
                             Cancelar
                         </button>
                         <button className="confirm-button" type="submit">

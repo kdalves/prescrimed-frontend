@@ -186,11 +186,9 @@ export default function PatientRegistration() {
             Confirmar
           </button>
 
-          <button className="confirm-button" type="submit">
+          <button className="confirm-button cancel" type="submit">
             Cancelar
           </button>
-
-
         </form>
       </main>
     </div>

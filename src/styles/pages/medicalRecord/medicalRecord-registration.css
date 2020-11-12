@@ -6,7 +6,7 @@
     position: fixed;
     height: 100%;
     padding: 32px 24px;
-    background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
+    background: #DCF2FF;
   
     display: flex;
     flex-direction: column;
@@ -67,6 +67,16 @@
 
   .inputs-responsible-info .input-block{
     margin-top: 0;
+  }
+
+  .plus-content{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px 10px 5px;
+  }
+
+  .plus-content .plus-medicine{
+    width: 40px;
   }
   
 
@@ -182,7 +192,7 @@
     height: 50px;
     border: 0;
     cursor: pointer;
-    background: #3CDC8C;
+    background: #337ab7;
     border-radius: 20px;
     color: #FFFFFF;
     font-weight: 700;
@@ -195,5 +205,13 @@
   }
   
   form.create-medicalRecord-form button.confirm-button:hover {
-    background: #36CF82;
+    background: #2d86d4;
+  }
+
+  form.create-medicalRecord-form button.confirm-button.cancel {
+    background: #8a8a8a ;
+  }
+
+  form.create-medicalRecord-form button.confirm-button.cancel:hover {
+    background:#6f6f6f;
   }
