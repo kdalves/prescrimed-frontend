@@ -1,0 +1,4 @@
+.td-acoes-banco{
+    display: flex;
+    justify-content: space-around;
+}

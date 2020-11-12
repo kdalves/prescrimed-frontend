@@ -128,7 +128,7 @@
     height: 64px;
     border: 0;
     cursor: pointer;
-    background: #3CDC8C;
+    background: #337ab7;
     border-radius: 20px;
     color: #FFFFFF;
     font-weight: 800;
@@ -141,6 +141,6 @@
   }
   
   form.create-medic-form button.confirm-button:hover {
-    background: #36CF82;
+    background: #2d86d4;
   }
   

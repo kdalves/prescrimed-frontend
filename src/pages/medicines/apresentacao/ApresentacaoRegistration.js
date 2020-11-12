@@ -77,11 +77,11 @@ export default function ApresentacaoRegistration() {
             </Table>
 
           </fieldset>
-          <button className="confirm-button" type="submit">
+          <button className="confirm-button cancel" type="submit">
             Cancelar
           </button>
           <button className="confirm-button" type="submit">
-            Gravar
+            Salvar
           </button>
         </form>
         

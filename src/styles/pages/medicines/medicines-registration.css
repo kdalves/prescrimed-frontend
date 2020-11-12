@@ -6,7 +6,7 @@
     position: fixed;
     height: 100%;
     padding: 32px 24px;
-    background: linear-gradient(329.54deg, #15B6D6 0%, #15D6D6 100%);
+    background: #DCF2FF;
   
     display: flex;
     flex-direction: column;
@@ -113,14 +113,6 @@
     padding: 0 16px;
   }
   
-  form.create-medicines-form .input-block textarea {
-    min-height: 120px;
-    max-height: 240px;
-    resize: vertical;
-    padding: 16px;
-    line-height: 28px;
-  }
-  
   form.create-medicines-form button.confirm-button {
     margin-top: 64px;
   
@@ -128,7 +120,7 @@
     height: 64px;
     border: 0;
     cursor: pointer;
-    background: #3CDC8C;
+    background: #337ab7;
     border-radius: 20px;
     color: #FFFFFF;
     font-weight: 800;
@@ -141,6 +133,14 @@
   }
   
   form.create-medicines-form button.confirm-button:hover {
-    background: #36CF82;
+    background: #2d86d4;
+  }
+
+  form.create-medicines-form button.confirm-button.cancel {
+    background: #8a8a8a;
+  }
+
+  form.create-medicines-form button.confirm-button.cancel:hover {
+    background:#6f6f6f;
   }
   
