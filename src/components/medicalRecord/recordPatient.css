@@ -1,0 +1,73 @@
+.recordPatient-content{
+    width: 100%;
+}
+.recordPatient-content input{
+    border-radius: 5px;
+    border-width: 0.2px;
+    /* border-color: #dcf2ff; */
+}
+.patient-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.item{
+    margin: 5px;
+    font-size: 1.5rem;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.legends-footer{
+    display: flex;
+}
+.legends-footer p{
+    width: 100%;
+    font-size: 20px;
+    line-height: 34px;
+    color: #5C8599;
+    border-bottom: 1px solid #D3E2E5;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+.legends-footer p:last-child{
+    margin-left: 30px;
+}
+
+.patient-footer{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.allergy-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-right: 35px;
+}
+
+
+
+.allergy-content input{
+    height: 25px;
+    width: 150px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.measures-content{
+    display: flex;
+    font-size: 1.5rem;
+    margin-left: 90px;
+}
+
+.measures-content .measures-item{
+    margin: 5px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+}

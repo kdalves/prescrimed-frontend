@@ -7,7 +7,7 @@ import api from '../../../services/api';
 
 const MedicineSearch = () => {
 
-    const [users, setMedicines] = useState([]);
+    const [medicines, setMedicines] = useState([]);
 
     const [search, setSearch] = useState("");
 

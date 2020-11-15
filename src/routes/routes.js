@@ -8,6 +8,7 @@ import CadastroUsuario from '../pages/users/UsersRegistration';
 import CadastroMedicamento from '../pages/medicines/MedicinesRegistration';
 import CadastroApresentacao from '../pages/medicines/apresentacao/ApresentacaoRegistration';
 import CadastroProntuario from '../pages/medicalRecord/MedicalRecord';
+import TelaProntuario from '../pages/medicalRecord/MedicalRecordList';
 import ListaMedicos from '../pages/medics/MedicList';
 import ListaPacientes from '../pages/patients/PatientList';
 import ListaMedicamentos from '../pages/medicines/MedicinesList';
@@ -31,6 +32,7 @@ function Routes(){
                 <Route path="/listaMedicamentos" component={ListaMedicamentos}/>
                 <Route path="/listaPrescricoesSugeridas" component={ListaPrescricoesSugeridas}/>
                 <Route path="/listaUsuarios" component={ListaUsuarios}/>
+                <Route path="/prontuario" component={TelaProntuario}/>
             </Switch>   
         </BrowserRouter>
     );
