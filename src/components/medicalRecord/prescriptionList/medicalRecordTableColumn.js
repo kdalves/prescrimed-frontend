@@ -1,4 +1,5 @@
 import React from 'react';
+import ColumnUpdateRemove from '../../tableComponents/columnUpdateRemove';
 const MedicalRecordColumn = ( { prescription }) => {
 
     return(
@@ -8,7 +9,7 @@ const MedicalRecordColumn = ( { prescription }) => {
             <td>{prescription.IdProfissional}</td>
             <td>{prescription.IdProfissional}</td>
             <td>{prescription.DataAssinatura}</td>
-            <td> </td>
+            <ColumnUpdateRemove />
         </tr>
     )
 }
