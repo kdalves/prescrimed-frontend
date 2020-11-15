@@ -1,8 +1,9 @@
 import React from "react";
 import '../../styles/pages/medicalRecord/medicalRecord-list.css';
-import PatientSearch from '../../components/search/patient/patientSearch';
 import Sidebar from '../../components/sidebar/Sidebar';
 import PatientInformation from '../../components/medicalRecord/recordPatient';
+import MedicalRecordPrescriptionSearch from '../../components/search/medicalRecord/medicalRecordSearch';
+import loupe from '../../images/loupe64.png';
 
 export default function MedicalRecordList() {
     return (
@@ -13,12 +14,16 @@ export default function MedicalRecordList() {
                 <form className="show-medicalRecord-form">
                     <fieldset>
                         <legend>Prontuário do Paciente</legend>
-                        {/* <PatientSearch /> */}
                         <PatientInformation />
+                        <div className="search-patient">
+                            <a> <img src={loupe} /></a>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <legend>Prescrições</legend>
-                        {/* chamar tabela de prescrições*/}
+                        <div className="medical-prescription-content">
+                            <MedicalRecordPrescriptionSearch />
+                        </div>
                     </fieldset>
                 </form>
             </main>

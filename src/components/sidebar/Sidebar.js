@@ -27,11 +27,11 @@ export default function Sidebar() {
                 </Link>
                 <p>Medicamentos</p>
                 <Link to="">
-                    <img src={pranchetIcon} alt="prancheta" />
+                    <img src={pranchetIcon} alt="protocolos" />
                 </Link>
                 <p>Protocolos</p>
-                <Link to="">
-                    <img src={pasteIcon} alt="pasta" />
+                <Link to="/prontuario">
+                    <img src={pasteIcon} alt="prontuario" />
                 </Link>
                 <p>Prontuário</p>
                 <Link to="/listaUsuarios">

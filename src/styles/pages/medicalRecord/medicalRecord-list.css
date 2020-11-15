@@ -47,7 +47,7 @@
   }
   
   form.show-medicalRecord-form {
-    width: 930px;
+    width: 75%;
     margin: 64px auto;
   
     background: #FFFFFF;
@@ -61,7 +61,21 @@
   
   form.show-medicalRecord-form fieldset {
     border: 0;
+    display: flex;
+    flex-direction: row;
   }
+
+  form.show-medicalRecord-form fieldset .search-patient{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 40px;
+  }
+
+  form.show-medicalRecord-form fieldset .search-patient img{
+    width: 40px;
+  }
+
   
   form.show-medicalRecord-form fieldset + fieldset {
     margin-top: 80px;
@@ -150,5 +164,10 @@
 
   form.create-medicalRecord-form button.confirm-button.cancel:hover {
     background:#6f6f6f;
+  }
+
+  .medical-prescription-content{
+    width: 100%;
+    display: flex;
   }
   

@@ -1,7 +1,9 @@
 import React from 'react';
 import './medicTableColumn.css';
-import deleteIcon from '../../images/delete.png';
-import updateIcon from '../../images/refresh.png';
+import deleteIcon from '../../images/deleteColor.png';
+import updateIcon from '../../images/refreshColor.png';
+
+
 
 const MedicTableColumn = ({ medic }) => {
 
