@@ -2,6 +2,7 @@ import React from 'react';
 import './medicTableColumn.css';
 import deleteIcon from '../../images/deleteColor.png';
 import updateIcon from '../../images/refreshColor.png';
+import ColumnUpdateRemove from '../tableComponents/columnUpdateRemove';
 
 
 
@@ -14,7 +15,7 @@ const MedicTableColumn = ({ medic }) => {
             <td htmlFor="id_especialidade">{medic.IdEspecialidade}</td>
             <td htmlFor="cpf">{medic.CPF}</td>
             <td htmlFor="crm">{medic.CRM}</td>
-            <td className="td-acoes-banco"><img src={updateIcon} /> <img src={deleteIcon} /></td>
+            <ColumnUpdateRemove />
         </tr>
     );
 

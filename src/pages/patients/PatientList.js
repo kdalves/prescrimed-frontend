@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from '../../components/sidebar/Sidebar';
-
 import '../../styles/pages//patients/patient-list.css';
 import PatientSearch from '../../components/search/patient/patientSearch';
 
