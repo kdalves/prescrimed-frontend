@@ -7,7 +7,7 @@ import PrescriptionSuggestedTableColumn from "./prescriptionSuggestedTableColumn
 const PrescriptonSuggestedList = ({ prescriptionsSuggested }) => (
     <UIContainer>  
         <fieldset>
-            <Link to="/cadastroProtocolos">Adicionar protocolo</Link>
+            <Link to="/cadastroPrescricaoSugerida">Adicionar prescrição sugerida</Link>
             <Table striped bordered hover>
                 <thead>
                     <tr>

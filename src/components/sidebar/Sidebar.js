@@ -26,10 +26,10 @@ export default function Sidebar() {
                     <img src={kitIcon} alt="medicamentos" />
                 </Link>
                 <p>Medicamentos</p>
-                <Link to="">
-                    <img src={pranchetIcon} alt="protocolos" />
+                <Link to="/listaPrescricoesSugeridas">
+                    <img src={pranchetIcon} alt="prescrições" />
                 </Link>
-                <p>Protocolos</p>
+                <p>Prescrições</p>
                 <Link to="/prontuario">
                     <img src={pasteIcon} alt="prontuario" />
                 </Link>

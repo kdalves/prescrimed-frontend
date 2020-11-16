@@ -8,12 +8,14 @@ import CadastroUsuario from '../pages/users/UsersRegistration';
 import CadastroMedicamento from '../pages/medicines/MedicinesRegistration';
 import CadastroApresentacao from '../pages/medicines/apresentacao/ApresentacaoRegistration';
 import CadastroProntuario from '../pages/medicalRecord/MedicalRecord';
+import CadastroPrescricaoSugerida from '../pages/prescription/PrescriptionSuggestedRegistration';
 import TelaProntuario from '../pages/medicalRecord/MedicalRecordList';
 import ListaMedicos from '../pages/medics/MedicList';
 import ListaPacientes from '../pages/patients/PatientList';
 import ListaMedicamentos from '../pages/medicines/MedicinesList';
 import ListaPrescricoesSugeridas from '../pages/prescription/PrescriptionSuggestedList';
 import ListaUsuarios from '../pages/users/UsersList';
+import NovoMedicamento from '../pages/prescription/NewMedicine';
 
 function Routes(){
     return(
@@ -27,12 +29,14 @@ function Routes(){
                 <Route path="/cadastroMedicamentos" component={CadastroMedicamento}/>
                 <Route path="/cadastroApresentacao" component={CadastroApresentacao}/>
                 <Route path="/cadastroProntuario" component={CadastroProntuario}/>
+                <Route path="/cadastroPrescricaoSugerida" component={CadastroPrescricaoSugerida}/>
                 <Route path="/listaMedicos" component={ListaMedicos}/>
                 <Route path="/listaPacientes" component={ListaPacientes}/>
                 <Route path="/listaMedicamentos" component={ListaMedicamentos}/>
                 <Route path="/listaPrescricoesSugeridas" component={ListaPrescricoesSugeridas}/>
                 <Route path="/listaUsuarios" component={ListaUsuarios}/>
                 <Route path="/prontuario" component={TelaProntuario}/>
+                <Route path="/novoMedicamento" component={NovoMedicamento}/>
             </Switch>   
         </BrowserRouter>
     );
