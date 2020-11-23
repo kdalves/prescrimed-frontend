@@ -6,6 +6,7 @@ import api from '../../services/api';
 import PostUsers from '../../services/ServiceUsers/postUsers';
 import PutUser from '../../services/ServiceUsers/putUser';
 import GetIDUser from '../../services/ServiceUsers/getIDUser';
+import ContainerForm from "../../components/UI/container/containerForm";
 
 const initialValue = {
   "IdUsuario": 0,
@@ -21,17 +22,17 @@ export default function UserRegistration() {
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
 
-  const postUser = async(value) => {
+  const postUser = async (value) => {
     const response = await PostUsers(value);
     console.log(response);
   }
 
-  const putUser = async (id ,value) => {
-    const response = await PutUser(id ,value)
+  const putUser = async (id, value) => {
+    const response = await PutUser(id, value)
     console.log(response);
-  } 
+  }
 
-  useEffect(() =>{
+  useEffect(() => {
 
     const loadUser = async (id) => {
       const response = await GetIDUser(id);
@@ -54,17 +55,17 @@ export default function UserRegistration() {
 
   function onSubmit(event) {
     event.preventDefault(); //n aparecer dados no link
-    
-    try{
 
-      if(id){
+    try {
+
+      if (id) {
         putUser(id, values);
         history.push('/listaUsuarios');
-      }else{
+      } else {
         postUser(values);
         history.push('/listaUsuarios');
-      } 
-    }catch(error){
+      }
+    } catch (error) {
       console.log('Houve algum problema', error);
     }
 
@@ -77,42 +78,45 @@ export default function UserRegistration() {
 
   return (
     <div id="page-create-user">
-      <Sidebar/>
-      <main>
-        <form className="create-user-form" onSubmit={onSubmit}>
-          <fieldset>
-            <legend>Cadastro de Usuarios</legend>
+      <Sidebar />
+      <ContainerForm>
+        <main>
+          <form className="create-user-form" onSubmit={onSubmit}>
+            <fieldset>
+              <legend>Cadastro de Usuarios</legend>
 
-            <div className="input-block">
-              <label htmlFor="cpf">CPF</label>
-              <input id="CPF" name="CPF" onChange={onChange} />
-            </div>
-
-            <div className="input-block">
-              <label htmlFor="name">Nome</label>
-              <input id="Nome" name="Nome" onChange={onChange} />
-            </div>
-
-            <div className="input-block">
-              <label htmlFor="admin_status">Admin:</label>
-
-              <div className="button-select">
-                <button type="button" className="active" id="Admin" name="Admin">Sim</button>
-                <button type="button" id="Admin" name="Admin">Não</button>
+              <div className="input-block">
+                <label htmlFor="cpf">CPF</label>
+                <input id="CPF" name="CPF" onChange={onChange} />
               </div>
-            </div>
-            <div className="input-block">
-              <label htmlFor="user_status">Status</label>
-              <input id="Status" name="Status" onChange={onChange} />
-            </div>
 
-          </fieldset>
-          <button className="confirm-button" type="submit">
-            Confirmar
+              <div className="input-block">
+                <label htmlFor="name">Nome</label>
+                <input id="Nome" name="Nome" onChange={onChange} />
+              </div>
+
+              <div className="input-block">
+                <label htmlFor="admin_status">Admin:</label>
+
+                <div className="button-select">
+                  <button type="button" className="active" id="Admin" name="Admin">Sim</button>
+                  <button type="button" id="Admin" name="Admin">Não</button>
+                </div>
+              </div>
+              <div className="input-block">
+                <label htmlFor="user_status">Status</label>
+                <input id="Status" name="Status" onChange={onChange} />
+              </div>
+
+            </fieldset>
+            <button className="confirm-button" type="submit">
+              Confirmar
           </button>
-        </form>
+          </form>
 
-      </main>
+        </main>
+      </ContainerForm>
+
     </div>
   );
 }
