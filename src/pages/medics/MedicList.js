@@ -13,7 +13,7 @@ export default function MedicList() {
             <main>
                 <form className="show-medic-form">
                     <fieldset>
-                        <legend>Dados do médico:</legend>
+                        <legend>Médicos</legend>
                         <MedicSearch id={id} />              {/* NAO TINHA ESSE ID */ }
                     </fieldset>
                 </form>
