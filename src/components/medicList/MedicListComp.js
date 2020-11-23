@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Table } from 'react-bootstrap';
 import UIContainer from "../UI/Container";
 import MedicTableColumn from "./medicTableColumn";
@@ -14,14 +14,14 @@ const MedicList = ({ medics }) => (
                         <th>Nome</th>
                         <th>Categoria</th>
                         <th>Especialidade</th>
-                        <th>CPF</th>
                         <th>CRM</th>
                         <th>Atualizar Remover </th>
                     </tr>
                 </thead>
                 <tbody>
                     {medics.map((medic) => (
-                        <MedicTableColumn medic={medic} />
+                        <MedicTableColumn medic={medic}
+                            onClickDelete={() => console.log('Médico DELETED' + medic.IdProfissional + medic.Nome)} />
                     ))}
                 </tbody>
             </Table>

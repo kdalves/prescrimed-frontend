@@ -15,6 +15,7 @@ const UserList = ({ users }) => (
             <th>Cpf</th>
             <th>Admin</th>
             <th>Status</th>
+            <th>Atualizar Remover</th>
           </tr>
         </thead>
         <tbody>

@@ -3,6 +3,9 @@ import { useHistory, useParams } from "react-router-dom";
 import '../../styles/pages//users/users-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
 import api from '../../services/api';
+import PostUsers from '../../services/ServiceUsers/postUsers';
+import PutUser from '../../services/ServiceUsers/putUser';
+import GetIDUser from '../../services/ServiceUsers/getIDUser';
 
 const initialValue = {
   "IdUsuario": 0,
@@ -18,6 +21,26 @@ export default function UserRegistration() {
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
 
+  const postUser = async(value) => {
+    const response = await PostUsers(value);
+    console.log(response);
+  }
+
+  const putUser = async (id ,value) => {
+    const response = await PutUser(id ,value)
+    console.log(response);
+  } 
+
+  useEffect(() =>{
+
+    const loadUser = async (id) => {
+      const response = await GetIDUser(id);
+      setValues(response[0]);
+    }
+    loadUser(id);
+
+  }, []);
+
   function onChange(event) { //recebe um evento e captura um nome e valor do input
     const { name, value } = event.target;
 
@@ -31,12 +54,25 @@ export default function UserRegistration() {
 
   function onSubmit(event) {
     event.preventDefault(); //n aparecer dados no link
-    //utilzar o axios para fazer um request
+    
+    try{
 
-    api.post('/usuarios', values)
-      .then((response) => {
-        history.push('/listaUsuarios') 
-      });
+      if(id){
+        putUser(id, values);
+        history.push('/listaUsuarios');
+      }else{
+        postUser(values);
+        history.push('/listaUsuarios');
+      } 
+    }catch(error){
+      console.log('Houve algum problema', error);
+    }
+
+
+    // api.post('/usuarios', values)
+    //   .then((response) => {
+    //     history.push('/listaUsuarios') 
+    //   });
   }
 
   return (
