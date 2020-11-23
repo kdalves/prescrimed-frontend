@@ -19,8 +19,6 @@ const PrescriptionSuggestedTableColumn = ({ prescriptionSuggested }) => {
               <Link to={`/editarPrescricaoSugerida/${prescriptionSuggested.IdProtocolo}`}>
                 <img src={updateIcon} />
               </Link>  
-            </td>
-            <td className="bank-actions">
               <button onClick={() => deletePrescription(prescriptionSuggested.IdProtocolo)}>
                 <img  src={deleteIcon} />
               </button> 
