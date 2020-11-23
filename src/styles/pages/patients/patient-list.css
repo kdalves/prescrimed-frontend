@@ -47,15 +47,8 @@
   }
   
   form.show-patient-form {
-    width: 900px;
-    margin: 64px auto;
-  
     background: #FFFFFF;
-    border: 1px solid #D3E2E5;
-    border-radius: 20px;
-  
-    padding: 64px 80px;
-  
+    padding: 10px 20px;
     overflow: hidden;
   }
   
