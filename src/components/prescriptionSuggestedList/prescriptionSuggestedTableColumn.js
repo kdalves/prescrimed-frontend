@@ -16,14 +16,15 @@ const PrescriptionSuggestedTableColumn = ({ prescriptionSuggested }) => {
             <td htmlFor="protocolo_descricao">{prescriptionSuggested.Descricao}</td>
             <td htmlFor="protocolo_indicacao">{prescriptionSuggested.Indicacao}</td>
             <td className="bank-actions">   
-                <Link to={`/editarPrescricaoSugerida/${prescriptionSuggested.IdProtocolo}`}>
-                    <img src={updateIcon} />
-                </Link>  
-                <button onClick={() => deletePrescription(prescriptionSuggested.IdProtocolo)}>
-                    <img  src={deleteIcon} />
-                </button> 
-                </td>
-            
+              <Link to={`/editarPrescricaoSugerida/${prescriptionSuggested.IdProtocolo}`}>
+                <img src={updateIcon} />
+              </Link>  
+            </td>
+            <td className="bank-actions">
+              <button onClick={() => deletePrescription(prescriptionSuggested.IdProtocolo)}>
+                <img  src={deleteIcon} />
+              </button> 
+            </td>            
         </tr>
     );
 

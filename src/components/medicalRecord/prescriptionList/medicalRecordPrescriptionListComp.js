@@ -12,7 +12,8 @@ const MedicalRecordPrescriptionList = ( {prescriptions }) => (
                     <th>Médico Prescritor</th>
                     <th>Médico Assinante</th>
                     <th>Data assinatura</th>
-                    <th>Atualizar Remover </th>
+                    <th>Editar</th>
+                    <th>Remover</th>
                 </tr>
             </thead>
             <tbody>

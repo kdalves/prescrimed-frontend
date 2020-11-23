@@ -14,11 +14,12 @@ const MedicTableColumn = ({ medic, onClickDelete }) => {
 
     return (
         <tr>
-            <td> <label htmlFor="nome">{medic.Nome} </label></td>
+            <td style="text-align:center;"><label htmlFor="nome">{medic.Nome} </label></td>
             <td htmlFor="id_categoria">{medic.IdCategoria}</td>
             <td htmlFor="id_especialidade">{medic.IdEspecialidade}</td>
             <td htmlFor="crm">{medic.CRM}</td>
-            <td className="bank-actions">   <Link to={`/editarMedico/${medic.IdProfissional}`}><img src={updateIcon} /></Link>  <button onClick={() => deleteProfissional(medic.IdProfissional)}><img  src={deleteIcon} /></button> </td>
+            <td className="bank-actions"><Link to={`/editarMedico/${medic.IdProfissional}`}><img src={updateIcon} /></Link></td>
+            <td className="bank-actions"><button onClick={() => deleteProfissional(medic.IdProfissional)}><img  src={deleteIcon} /></button> </td>
         </tr>
     );
 

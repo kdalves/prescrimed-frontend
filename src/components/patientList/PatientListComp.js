@@ -7,7 +7,7 @@ import PatientTableColumn from "./patientTableColumn";
 const PatientList = ({ patients }) => (
     <UIContainer>  
         <fieldset>
-            <Link to="/listaPacientes">Adicionar Paciente</Link>
+            <Link to="/cadastroPacientes">Adicionar Paciente</Link>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -16,7 +16,8 @@ const PatientList = ({ patients }) => (
                         <th>CPF</th>
                         <th>Sexo</th>
                         <th>Nascimento</th>
-                        <th> </th>
+                        <th>Editar</th>
+                        <th>Remover</th>
                     </tr>
                 </thead>
                 <tbody>
