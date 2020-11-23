@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useHistory} from "react-router-dom";
 import '../../styles/pages/patients/patient-registration.css';
 import AllergySearch from '../../components/search/allergy/allergySearch';
 import Sidebar from '../../components/sidebar/Sidebar';
@@ -58,56 +58,56 @@ export default function PatientRegistration() {
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>
-              <input id="name" onChange={onChange}/>
+              <input id="Nome" name="Nome" onChange={onChange}/>
             </div>
 
             <div className="input-block">
               <label htmlFor="name_social">Nome Social</label>
-              <input id="name_social" onChange={onChange}/> 
+              <input id="NomeSocial" name="NomeSocial" onChange={onChange}/> 
             </div>
             <div className="grid-names">
               <div className="input-block">
                 <label htmlFor="document">Documento</label>
-                <input id="document" onChange={onChange}/> 
+                <input id="Documento" name="Documento" onChange={onChange}/> 
               </div>
 
               <div className="input-block">
-                <label htmlFor="gender">Sexo</label>
-                <input id="gender" onChange={onChange}/> 
+                <label htmlFor="genero">Sexo</label>
+                <input id="Sexo" name="Sexo" onChange={onChange}/> 
               </div>
 
               <div className="input-block">
                 <label htmlFor="cpf">CPF</label>
-                <input id="cpf" onChange={onChange}/> 
+                <input id="CPF" name="CPF" onChange={onChange}/> 
               </div>
 
               <div className="input-block">
-                <label htmlFor="birth">Nascimento</label>
-                <input id="birth" onChange={onChange}/> 
+                <label htmlFor="nascimento">Nascimento</label>
+                <input id="Nascimento" name="Nascimento" onChange={onChange}/> 
               </div>
             </div>
 
             <div className="input-block">
-              <label htmlFor="nationality">Naturalidade</label>
-              <input id="nationality" onChange={onChange}/> 
+              <label htmlFor="nacionalidade">Naturalidade</label>
+              <input id="Naturalidade" name="Naturalidade" onChange={onChange}/> 
             </div>
           </fieldset>
           <fieldset>
             <legend>Medidas do Paciente</legend>
             <div className="inputs-measures" name="body_surfacex">
               <div className="input-block">
-                <label htmlFor="weight">Peso</label>
-                <input id="weight" name="weightx" onChange={onChange}/>
+                <label htmlFor="peso">Peso</label>
+                <input id="Peso" name="Peso" onChange={onChange}/>
               </div>
 
               <div className="input-block">
-                <label htmlFor="height">Altura</label>
-                <input id="height" name="heightx" onChange={onChange}/>
+                <label htmlFor="altura">Altura</label>
+                <input id="Altura" name="Altura" onChange={onChange}/>
               </div>
 
               <div className="input-block">
-                <label htmlFor="body_surface">Superfície Corporal</label>
-                <input id="body_surface" name="resultsurfacex" value="" onChange={onChange}/>
+                <label htmlFor="superficie">Superfície Corporal</label>
+                <input id="Superficie" name="Superficie" value="" onChange={onChange}/>
                 <img className="calculeSurface" src={calcule} href="#"/>
               </div>
             </div>
@@ -123,47 +123,45 @@ export default function PatientRegistration() {
           <fieldset>
             <legend>Outras informações do paciente</legend>
             <div className="input-block">
-              <label htmlFor="address">Endereço</label>
-              <input id="address" onChange={onChange} /> 
+              <label htmlFor="endereco">Endereço</label>
+              <input id="Endereco" name="Endereco" onChange={onChange} /> 
             </div>
 
             <div className="input-block">
               <label htmlFor="complement">Complemento</label>
-              <input id="complement" onChange={onChange} /> 
+              <input id="Complemento" name="Complemento" onChange={onChange} /> 
             </div>
             <div className="grid-address">
               <div className="input-block">
                 <label htmlFor="cep">CEP</label>
-                <input id="cep" onChange={onChange} /> 
+                <input id="Cep" name="Cep" onChange={onChange} /> 
               </div>
 
               <div className="input-block">
-                <label htmlFor="neighborhood">Bairro</label>
-                <input id="neighborhood" onChange={onChange} /> 
+                <label htmlFor="bairro">Bairro</label>
+                <input id="Bairro" name="Bairro" onChange={onChange} /> 
               </div>
 
               <div className="input-block">
-                <label htmlFor="city">Cidade</label>
-                <input id="city" onChange={onChange} /> 
+                <label htmlFor="cidade">Cidade</label>
+                <input id="Cidade" name="Cidade" onChange={onChange} /> 
               </div>
 
               <div className="input-block">
                 <label htmlFor="uf">UF</label>
-                <input id="uf" onChange={onChange} /> 
+                <input id="UF" name="UF" onChange={onChange} /> 
               </div>
 
               <div className="input-block">
-                <label htmlFor="telephone">Fone</label>
-                <input id="telephone" onChange={onChange} /> 
+                <label htmlFor="fone">Fone</label>
+                <input id="Fone" name="Fone" onChange={onChange} /> 
               </div>
 
               <div className="input-block">
-                <label htmlFor="cellPhone">Fone celular</label>
-                <input id="cellPhone" onChange={onChange} /> 
+                <label htmlFor="foneCelular">Fone celular</label>
+                <input id="FoneCelular" name="FoneCelular" onChange={onChange} /> 
               </div>
             </div>
-
-
           </fieldset>
 
           <fieldset>
@@ -171,12 +169,12 @@ export default function PatientRegistration() {
             <div className="grid-responsible-info">
               <div className="input-block">
                 <label htmlFor="responsibleName">Nome</label>
-                <input id="responsibleName" onChange={onChange} /> 
+                <input id="Responsavel" name="Responsavel" onChange={onChange} /> 
               </div>
 
               <div className="input-block">
                 <label htmlFor="responsiblePhone">Fone</label>
-                <input id="responsiblePhone" onChange={onChange} /> 
+                <input id="FoneResponsavel" name="FoneResponsavel" onChange={onChange} /> 
               </div>
             </div>
 

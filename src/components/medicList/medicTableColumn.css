@@ -1,4 +1,9 @@
-.td-acoes-banco{
+.bank-actions{
     display: flex;
     justify-content: space-around;
+}
+
+.bank-actions button{
+    border: 0;
+    background: none;
 }

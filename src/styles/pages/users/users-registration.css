@@ -18,36 +18,12 @@
     width: 70px;
   }
   
-  #page-create-user aside footer a,
-  #page-create-user aside footer button {
-    width: 48px;
-    height: 48px;
-  
-    border: 0;
-  
-    background: #12AFCB;
-    border-radius: 16px;
-  
-    cursor: pointer;
-  
-    transition: background-color 0.2s;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #page-create-user aside footer a:hover,
-  #page-create-user aside footer button:hover {
-    background: #17D6EB;
-  }
-  
   #page-create-user main {
     flex: 1;
   }
   
   form.create-user-form {
-    width: 700px;
+    width: 75%;
     margin: 64px auto;
   
     background: #FFFFFF;
@@ -100,7 +76,7 @@
   
   form.create-user-form .input-block input,
   form.create-user-form .input-block textarea {
-    width: 100%;
+    width: 50%;
     background: #F5F8FA;
     border: 1px solid #D3E2E5;
     border-radius: 15px;
@@ -113,30 +89,14 @@
     padding: 0 16px;
   }
   
-  form.create-user-form .input-block textarea {
-    min-height: 120px;
-    max-height: 240px;
-    resize: vertical;
-    padding: 16px;
-    line-height: 28px;
-  }
-  
-  form.create-user-form .input-block .new-image {
-    width: 100%;
-    height: 64px;
-    background: #F5F8FA;
-    border: 1px dashed #96D2F0;
-    border-radius: 15px;
-    cursor: pointer;
-  }
-  
   form.create-user-form .input-block .button-select {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+
   }
   
   form.create-user-form .input-block .button-select button {
     height: 50px;
+    width: 50%;
     background: #F5F8FA;
     border: 1px solid #D3E2E5;
     color: #5C8599;
@@ -152,18 +112,20 @@
   form.create-user-form .input-block .button-select button:first-child {
     border-radius: 15px 0px 0px 15px;
     height: 40px;
+    width: 25%;
   }
   
   form.create-user-form .input-block .button-select button:last-child {
     border-radius: 0 15px 15px 0;
     border-left: 0;
     height: 40px;
+    width: 25%;
   }
   
   form.create-user-form button.confirm-button {
     margin-top: 64px;
   
-    width: 100%;
+    width: 50%;
     height: 64px;
     border: 0;
     cursor: pointer;

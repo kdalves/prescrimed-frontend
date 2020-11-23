@@ -9,7 +9,7 @@ export default function PrescriptionSuggestedList() {
         <div id="page-create-prescription"> 
             <Sidebar />
             <main>
-                <form className="create-prescription-form"> {/* TROCAR CSS */}
+                <form className="create-prescription-form">
                     <fieldset>
                         <legend>Prescrições sugeridas cadastradas</legend>
                         <PrescriptionSuggestedSearch />

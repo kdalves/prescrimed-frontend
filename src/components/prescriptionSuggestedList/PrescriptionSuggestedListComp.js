@@ -18,9 +18,9 @@ const PrescriptonSuggestedList = ({ prescriptionsSuggested }) => (
                     </tr>
                 </thead>
                 <tbody>
-                  {/*  {prescriptionsSuggested.map(( prescriptionSuggested) => (
+                   {prescriptionsSuggested.map(( prescriptionSuggested) => (
                         <PrescriptionSuggestedTableColumn  prescriptionSuggested={prescriptionSuggested} />
-                    ))} */}
+                    ))}
                 </tbody>
             </Table>
         </fieldset>
