@@ -4,7 +4,10 @@ import './columnUpdateRemove.css';
 
 const ColumnUpdateRemove = () =>{
     return(
-        <td className="bank-actions"><img src={updateIcon} /> <img src={deleteIcon} /></td>
+        <div>
+            <td className="bank-actions"><img src={updateIcon} /></td>
+            <td className="bank-actions"><img src={deleteIcon} /></td>
+        </div>
     )
 }
 export default ColumnUpdateRemove;

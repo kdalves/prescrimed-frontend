@@ -15,7 +15,8 @@ const MedicList = ({ medics }) => (
                         <th>Categoria</th>
                         <th>Especialidade</th>
                         <th>CRM</th>
-                        <th>Atualizar Remover </th>
+                        <th>Editar</th>
+                        <th>Remover</th>
                     </tr>
                 </thead>
                 <tbody>

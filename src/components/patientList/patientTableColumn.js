@@ -9,6 +9,8 @@ const PatientTableColumn = ({ patient }) => {
             <td htmlFor="cpf">{patient.CPF}</td>
             <td htmlFor="gender">{patient.Sexo}</td>
             <td htmlFor="birth">{patient.Nascimento}</td>
+            <th></th>
+            <th></th>
         </tr>
     );
 
