@@ -11,7 +11,7 @@ export default function UsersList() {
             <main>
                 <form className="show-user-form">
                     <fieldset>
-                        <legend>Usuários cadastrados</legend>
+                        <legend>Usuários</legend>
                         <Link to="/cadastroUsuarios">Adicionar Usuário</Link>
                         <UserSearch />
                     </fieldset>

@@ -11,7 +11,7 @@ export default function PrescriptionSuggestedList() {
             <main>
                 <form className="create-prescription-form">
                     <fieldset>
-                        <legend>Prescrições sugeridas cadastradas</legend>
+                        <legend>Modelos de Prescrições</legend>
                         <PrescriptionSuggestedSearch />
                     </fieldset>
                 </form>

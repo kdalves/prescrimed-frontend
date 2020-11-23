@@ -28,8 +28,8 @@ export default class Login extends Component {
                     <h6>{this.props.senha}:</h6>
                     <input type="password" className="form-control" id="inputPassword" placeholder="Insira sua senha"></input>
                     <input type="button" id="buttonLogin" className="btn btn-primary btn-block" value="Login" onClick={this.salvarDados}></input>
-                    <Link to="/esqueciMinhaSenha">Esqueci minha senha</Link>
-                    <h2>{this.state.cpf_valor}</h2>     
+                    <div className="login-forget-password"><Link to="/esqueciMinhaSenha">Esqueci minha senha</Link></div>
+                    {/* <h2>{this.state.cpf_valor}</h2>      */}
                 </fieldset>          
            </div>
        </div>

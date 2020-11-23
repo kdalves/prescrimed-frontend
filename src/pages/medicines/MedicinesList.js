@@ -12,7 +12,7 @@ export default function MedicinesList() {
             <main>
             <form className="show-medicines-form"> 
                 <fieldset>
-                    <legend>Medicamentos Cadastrados</legend>
+                    <legend>Medicamentos</legend>
                     <Link to="/cadastroMedicamentos">Adicionar Medicamento</Link>
                     <MedicineSearch />
                 </fieldset>  

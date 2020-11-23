@@ -6,9 +6,8 @@ function NavBar() {
 
     return (
         <div id="page-nav">       
-            <Sidebar/>    
-            <div></div>
-            </div>
-        )
+            <Sidebar/>
+        </div>
+    )
 }
 export default NavBar;

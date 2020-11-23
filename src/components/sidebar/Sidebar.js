@@ -29,7 +29,7 @@ export default function Sidebar() {
                 <Link to="/listaPrescricoesSugeridas">
                     <img src={pranchetIcon} alt="prescrições" />
                 </Link>
-                <p>Prescrições</p>
+                <p>Modelo de Prescrições</p>
                 <Link to="/prontuario">
                     <img src={pasteIcon} alt="prontuario" />
                 </Link>

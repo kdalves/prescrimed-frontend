@@ -11,7 +11,7 @@ export default function PatientList() {
             <main>
                 <form className="show-patient-form">
                     <fieldset>
-                        <legend>Pacientes cadastrados</legend>
+                        <legend>Pacientes</legend>
                         <PatientSearch />
                     </fieldset>
                 </form>
