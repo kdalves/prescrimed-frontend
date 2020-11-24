@@ -1,4 +1,5 @@
 import React from 'react';
+
 import formattedDate from '../../utils/formattedDate';
 
 const PatientTableColumn = ({ patient }) => {    
