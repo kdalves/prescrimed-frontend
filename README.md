@@ -21,8 +21,8 @@ O Prescrimed é um sistema web que auxilia aos médicos a receitar uma prescriç
 
 [Trabalho de Conclusão de Curso (parte escrita)](https://docs.google.com/document/d/1MPuaZft-VmtVFfSRwWWfKI7wRUmH9VSNEW2N_HstR2U/edit?usp=sharing)
 
-## Protótipo do Sistema
-[Telas do PrescriMed](https://xd.adobe.com/view/9083291f-f316-40a7-899c-b4f2a2964e8a-c5d0/?fullscreen)
+## PRESCRIMED
+[Veja como é o sistema](https://prescrimed.herokuapp.com/)
 
 ## Tecnologias
 - Backend: Node.Js
