@@ -1,15 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Table } from 'react-bootstrap';
-import UIContainer from "../UI/Container";
-import MedicTableColumn from "./medicTableColumn";
+import React from 'react';
+import Table from 'react-bootstrap/Table'
+import UIContainer from '../UI/Container';
+import MedicTableColumn from './medicTableColumn';
 
 const MedicList = ({ medics }) => (
     <UIContainer>
         <fieldset>
-            <Link to="/cadastroMedicos">Adicionar Médico</Link>
             <Table striped bordered hover>
-                <thead>
+                <thead> 
                     <tr>
                         <th>Nome</th>
                         <th>Categoria</th>

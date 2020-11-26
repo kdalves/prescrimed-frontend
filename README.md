@@ -12,22 +12,18 @@ Repositório de Backend: [prescrimed-backend](https://github.com/kdalves/prescri
 
 ## Sumário
 * [Sobre o Projeto](#sobre-o-projeto)
-* [Protótipo do Sistema](#protótipo-do-sistema)
+* [PRESCRIMED](#prescrimed)
 * [Tecnologias](#tecnologias)
-* [Instalação](#instalação)
 
 ## Sobre o projeto
 O Prescrimed é um sistema web que auxilia aos médicos a receitar uma prescrição médica de uma forma totalmente online.
 
 [Trabalho de Conclusão de Curso (parte escrita)](https://docs.google.com/document/d/1MPuaZft-VmtVFfSRwWWfKI7wRUmH9VSNEW2N_HstR2U/edit?usp=sharing)
 
-## Protótipo do Sistema
-[Telas do PrescriMed](https://xd.adobe.com/view/9083291f-f316-40a7-899c-b4f2a2964e8a-c5d0/?fullscreen)
+## PRESCRIMED
+[Veja como é o sistema](https://prescrimed.herokuapp.com/)
 
 ## Tecnologias
 - Backend: Node.Js
 - Frontend: Javascript (React)
 - Banco de Dados: MySQL
-
-## Instalação
-A definir

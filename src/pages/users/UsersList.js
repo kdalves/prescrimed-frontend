@@ -2,8 +2,9 @@ import React from "react";
 import Sidebar from '../../components/sidebar/Sidebar';
 import '../../styles/pages/users/user-list.css';
 import UserSearch from '../../components/search/user/userSearch';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import ContainerForm from "../../components/UI/container/containerForm";
+import AddButton from '../../components/addButton/addButton';
 
 export default function UsersList() {
     const { id } = useParams();
@@ -15,7 +16,7 @@ export default function UsersList() {
                     <form className="show-user-form">
                         <fieldset>
                             <legend>Usuários</legend>
-                            <Link to="/cadastroUsuarios">Adicionar Usuário</Link>
+                            <AddButton text="Adicionar Usuário " route="cadastroUsuarios" />
                             <UserSearch id={id} />
                         </fieldset>
                     </form>

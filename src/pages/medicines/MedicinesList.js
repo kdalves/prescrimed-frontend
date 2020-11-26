@@ -4,6 +4,7 @@ import MedicineSearch from '../../components/search/medicine/medicineSearch';
 import Sidebar from '../../components/sidebar/Sidebar';
 import { Link } from "react-router-dom";
 import ContainerForm from "../../components/UI/container/containerForm";
+import AddButton from '../../components/addButton/addButton';
 
 export default function MedicinesList() {
     return (
@@ -15,7 +16,7 @@ export default function MedicinesList() {
                     <form className="show-medicines-form">
                         <fieldset>
                             <legend>Medicamentos</legend>
-                            <Link to="/cadastroMedicamentos">Adicionar Medicamento</Link>
+                            <AddButton text="Adicionar Medicamento " route="cadastroMedicamentos" />
                             <MedicineSearch />
                         </fieldset>
                     </form>
