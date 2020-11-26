@@ -1,5 +1,4 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
 import { Table } from 'react-bootstrap';
 import UIContainer from "../UI/Container";
 import PrescriptionSuggestedTableColumn from "./prescriptionSuggestedTableColumn";
@@ -7,7 +6,6 @@ import PrescriptionSuggestedTableColumn from "./prescriptionSuggestedTableColumn
 const PrescriptonSuggestedList = ({ prescriptionsSuggested }) => (
     <UIContainer>  
         <fieldset>
-            <Link to="/cadastroPrescricaoSugerida">Adicionar Modelo de Prescrição</Link>
             <Table striped bordered hover>
                 <thead>
                     <tr>
@@ -18,7 +16,7 @@ const PrescriptonSuggestedList = ({ prescriptionsSuggested }) => (
                     </tr>
                 </thead>
                 <tbody>
-                   {prescriptionsSuggested.map(( prescriptionSuggested) => (
+                    {prescriptionsSuggested.map(( prescriptionSuggested) => (
                         <PrescriptionSuggestedTableColumn  prescriptionSuggested={prescriptionSuggested} />
                     ))}
                 </tbody>
