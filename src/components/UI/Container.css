@@ -2,3 +2,12 @@
    max-width: 800px;
    margin: 30px auto; 
 }
+
+Table, thead, tr, th, td, td td a, td td button {
+   text-align: center !important;
+   /* border-color: 1px solid #5C8599 !important; */
+}
+
+/* .table>table-striped>table-bordered>table-hover {   
+   border-color: 1px solid #62B2E3 !important;
+} */
