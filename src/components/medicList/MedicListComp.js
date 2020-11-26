@@ -4,7 +4,7 @@ import UIContainer from '../UI/Container';
 import MedicTableColumn from './medicTableColumn';
 
 const MedicList = ({ medics }) => (
-    <UIContainer>  
+    <UIContainer>
         <fieldset>
             <Table striped bordered hover>
                 <thead> 

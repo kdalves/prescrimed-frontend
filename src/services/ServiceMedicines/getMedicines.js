@@ -1,9 +1,9 @@
 import api from "../api";
 
-const GetProfissionais = async (data) => {
-    const profissionais = await api.get('/profissionais', data);
-  
-    return profissionais;
-  }
+const GetMedicines = async (data) => {
+  const medicines = await api.get('/medicamentos', data);
 
-  export default GetProfissionais;
+  return medicines;
+}
+
+export default GetMedicines;
