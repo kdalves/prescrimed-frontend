@@ -19,6 +19,7 @@ import NovoMedicamento from '../pages/prescription/NewMedicine';
 import EditarMedico from '../pages/medics/EditMedic';
 import EditarUsuario from '../pages/users/EditUser';
 import EditarProtocolo from '../pages/prescription/PrescriptionSuggestedRegistration';
+import EditarPaciente from '../pages/patients/EditPatient';
 
 function Routes() {
     return (
@@ -35,6 +36,7 @@ function Routes() {
 
                 <Route path="/cadastroPacientes" component={CadastroPacientes} />
                 <Route path="/listaPacientes" component={ListaPacientes} />
+                <Route path="/editarPaciente/:id" component={EditarPaciente} />
 
                 <Route path="/cadastroUsuarios" component={CadastroUsuario} />
                 <Route path="/listaUsuarios" component={ListaUsuarios} />

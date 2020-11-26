@@ -3,10 +3,11 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import '../../styles/pages//patients/patient-list.css';
 import PatientSearch from '../../components/search/patient/patientSearch';
 import ContainerForm from "../../components/UI/container/containerForm";
+import { useParams } from "react-router-dom";
 
 export default function PatientList() {
+    const { id } = useParams();
     return (
-
         <div id="page-show-patient">
             <Sidebar />
             <ContainerForm>
@@ -14,7 +15,7 @@ export default function PatientList() {
                     <form className="show-patient-form">
                         <fieldset>
                             <legend>Pacientes</legend>
-                            <PatientSearch />
+                            <PatientSearch id={id} />
                         </fieldset>
                     </form>
                 </main>
