@@ -56,11 +56,15 @@ export default function MedicRegistrationNew({ id }) {
     try {
 
       if (id) {
-        putProfissionais(id, values);
-        history.push('/listaMedicos');
+        putProfissionais(id, values)
+          .then((response) =>
+            history.push('/listaMedicos')
+          );
       } else {
-        postProfissionais(values);
-        history.push('/listaMedicos');
+        postProfissionais(values)
+          .then((response) =>
+            history.push('/listaMedicos')
+          );
       }
     } catch (error) {
       console.log('Houve algum problema', error);

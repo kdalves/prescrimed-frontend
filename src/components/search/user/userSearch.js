@@ -3,28 +3,36 @@ import '../../../styles/pages/users/users-registration.css';
 import UserList from '../../userList/UserListComp';
 import '../user/userSearch.css';
 import api from '../../../services/api';
+import GetUsers from '../../../services/ServiceUsers/getUsers';
 
-const UserSearch = () => {
+const UserSearch = ({ id }) => {
 
     const [users, setUsers] = useState([]);
 
     const [search, setSearch] = useState("");
+
+    const getUsers = async (value) => {
+        const response = await GetUsers(value);
+        setUsers(response.data);
+    }
 
     useEffect(() => {
         const params = {};
         if (search) {
             params.Nome_like = search;
         }
-        api.get('/usuarios', { params })
-            .then((response) => {
-                setUsers(response.data);
-            });
+        // api.get('/usuarios', { params })
+        //     .then((response) => {
+        //         setUsers(response.data);
+        //     });
 
-    }, [search]); // [] mudei para [search] sempre que valor de search mudar, ele vai executar o useEffect
+        getUsers();
+
+    }, [search]);
 
     return (
         <div>
-            <UserList users={users}/>
+            <UserList users={users} />
         </div>
     )
 }
