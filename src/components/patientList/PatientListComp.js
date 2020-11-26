@@ -14,7 +14,7 @@ const PatientList = ({ patients }) => (
                         <th>CPF</th>
                         <th>Sexo</th>
                         <th>Nascimento</th>
-                        <th>Editar | Remover</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
