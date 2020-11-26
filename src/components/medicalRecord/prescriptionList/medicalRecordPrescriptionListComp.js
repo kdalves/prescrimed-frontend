@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Table } from 'react-bootstrap';
 import MedicalRecordColumn from './medicalRecordTableColumn';
 
@@ -12,7 +12,7 @@ const MedicalRecordPrescriptionList = ( {prescriptions }) => (
                     <th>Médico Prescritor</th>
                     <th>Médico Assinante</th>
                     <th>Data assinatura</th>
-                    <th>Editar | Remover</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>

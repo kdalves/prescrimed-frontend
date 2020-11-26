@@ -12,7 +12,7 @@ const PrescriptonSuggestedList = ({ prescriptionsSuggested }) => (
                         <th>Sigla</th>
                         <th>Descrição</th>
                         <th>Indicação</th>
-                        <th>Editar | Remover</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>

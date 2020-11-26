@@ -1,6 +1,7 @@
 import React from 'react';
 
 import formattedDate from '../../utils/formattedDate';
+import Buttons from '../editDelButton/EditDelButton';
 
 const PatientTableColumn = ({ patient }) => {    
     return (
@@ -10,8 +11,7 @@ const PatientTableColumn = ({ patient }) => {
             <td htmlFor="cpf">{patient.CPF}</td>
             <td htmlFor="gender">{patient.Sexo}</td>
             <td htmlFor="birth">{formattedDate(patient.Nascimento)}</td>
-            <th></th>
-            <th></th>
+            <td> <Buttons routeEdit={`lala`} delete={`lala`}/></td>
         </tr>
     );
 }

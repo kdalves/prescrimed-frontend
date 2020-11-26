@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import deleteIcon from '../../images/deleteColor.png';
-import updateIcon from '../../images/refreshColor.png';
 import DeleteUser from '../../services/ServiceUsers/deleteUser';
+import Buttons from '../editDelButton/EditDelButton';
 
 const UserTableColumn = ({ user }) => {
 
@@ -14,10 +12,10 @@ const UserTableColumn = ({ user }) => {
         <tr>
             <td>{user.IdUsuario}</td>
             <td>{user.Nome}</td>
-            <td> {user.CPF}</td>
-            <td> {user.Admin}</td>
-            <td> {user.Status}</td>
-            <td className="bank-actions"><Link to={`/editarUsuario/${user.IdUsuario}`}><img src={updateIcon} /></Link><button onClick={() => deleteUser(user.IdUsuario)}><img  src={deleteIcon} /></button></td>
+            <td>{user.CPF}</td>
+            <td>{user.Admin}</td>
+            <td>{user.Status}</td>
+            <td><Buttons routeEdit={`/editarUsuario/${user.IdUsuario}`} delete={deleteUser(user.IdUsuario)}/></td>
         </tr>
     );
 
