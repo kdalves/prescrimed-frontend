@@ -1,9 +1,9 @@
 import api from '../api'
 
-const DeleteProfissionais = async (id) => {
-  const profissional = await api.delete(`profissionais/${id}`)
+const DeleteMedicines = async (id) => {
+  const medicines = await api.delete(`medicamentos/${id}`)
 
-  return profissional;
+  return medicines;
 }
 
-export default DeleteProfissionais;
+export default DeleteMedicines;

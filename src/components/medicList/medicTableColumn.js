@@ -5,8 +5,7 @@ import Buttons from '../editDelButton/EditDelButton';
 
 const MedicTableColumn = ({ medic, onClickDelete }) => {
 
-
-    const deleteProfissional = async(id) =>{
+    const deleteProfissional = async (id) => {
         await DeleteProfissionais(id);
     }
 
@@ -16,7 +15,7 @@ const MedicTableColumn = ({ medic, onClickDelete }) => {
             <td htmlFor="id_categoria">{medic.IdCategoria}</td>
             <td htmlFor="id_especialidade">{medic.IdEspecialidade}</td>
             <td htmlFor="crm">{medic.CRM}</td>
-            <td> <Buttons routeEdit={`/editarMedico/${medic.IdProfissional}`} delete={deleteProfissional(medic.IdProfissional)}/></td>
+            <td><Buttons routeEdit={`/editarMedico/${medic.IdProfissional}`} delete={deleteProfissional(medic.IdProfissional)}/></td>
         </tr>
     );
 

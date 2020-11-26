@@ -16,8 +16,7 @@ const initialValue = {
   "Status": 0
 }
 
-export default function UserRegistration() {
-  const { id } = useParams();
+export default function UserRegistration({ id }) {
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
@@ -36,8 +35,10 @@ export default function UserRegistration() {
 
     const loadUser = async (id) => {
       const response = await GetIDUser(id);
+      console.log('loadUser', response);
       setValues(response[0]);
     }
+
     loadUser(id);
 
   }, []);
@@ -59,11 +60,12 @@ export default function UserRegistration() {
     try {
 
       if (id) {
-        putUser(id, values);
-        history.push('/listaUsuarios');
+        putUser(id, values)
+          .then((response) => history.push('/listaUsuarios'));
+
       } else {
-        postUser(values);
-        history.push('/listaUsuarios');
+        postUser(values)
+          .then((response) => history.push('/listaUsuarios'));
       }
     } catch (error) {
       console.log('Houve algum problema', error);
@@ -87,12 +89,12 @@ export default function UserRegistration() {
 
               <div className="input-block">
                 <label htmlFor="cpf">CPF</label>
-                <input id="CPF" name="CPF" onChange={onChange} />
+                <input id="CPF" name="CPF" onChange={onChange} value={values?.CPF} />
               </div>
 
               <div className="input-block">
                 <label htmlFor="name">Nome</label>
-                <input id="Nome" name="Nome" onChange={onChange} />
+                <input id="Nome" name="Nome" onChange={onChange} value={values?.Nome} />
               </div>
 
               <div className="input-block">
@@ -105,7 +107,7 @@ export default function UserRegistration() {
               </div>
               <div className="input-block">
                 <label htmlFor="user_status">Status</label>
-                <input id="Status" name="Status" onChange={onChange} />
+                <input id="Status" name="Status" onChange={onChange} value={values?.Status} />
               </div>
 
             </fieldset>

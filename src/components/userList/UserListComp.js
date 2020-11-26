@@ -26,8 +26,6 @@ const UserList = ({ users }) => (
       </Table>
     </fieldset>
   </UIContainer>
-
-
 );
 
 export default UserList;

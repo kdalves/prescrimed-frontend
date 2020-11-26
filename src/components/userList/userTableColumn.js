@@ -4,10 +4,10 @@ import Buttons from '../editDelButton/EditDelButton';
 
 const UserTableColumn = ({ user }) => {
 
-    const deleteUser = async(id) => {
+    const deleteUser = async (id) => {
         await DeleteUser(id);
     }
-    
+
     return (
         <tr>
             <td>{user.IdUsuario}</td>
