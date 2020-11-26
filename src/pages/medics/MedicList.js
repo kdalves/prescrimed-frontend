@@ -4,6 +4,7 @@ import MedicSearch from '../../components/search/medic/medicSearch';
 import Sidebar from '../../components/sidebar/Sidebar';
 import { useParams } from "react-router-dom";
 import ContainerForm from "../../components/UI/container/containerForm";
+import AddButton from '../../components/addButton/addButton';
 
 export default function MedicList() {
     const { id } = useParams();
@@ -16,6 +17,7 @@ export default function MedicList() {
                     <form className="show-medic-form">
                         <fieldset>
                             <legend>Médicos</legend>
+                            <AddButton text="Adicionar Médico " route="cadastroMedicos" />
                             <MedicSearch id={id} />              {/* NAO TINHA ESSE ID */}
                         </fieldset>
                     </form>

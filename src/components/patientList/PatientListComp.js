@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Table } from 'react-bootstrap';
 import UIContainer from "../UI/Container";
 import PatientTableColumn from "./patientTableColumn";
@@ -7,7 +6,6 @@ import PatientTableColumn from "./patientTableColumn";
 const PatientList = ({ patients }) => (
     <UIContainer>  
         <fieldset>
-            <Link to="/cadastroPacientes">Adicionar Paciente</Link>
             <Table striped bordered hover>
                 <thead>
                     <tr>
