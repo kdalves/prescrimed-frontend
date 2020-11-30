@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import '../../styles/pages//users/users-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
-import api from '../../services/api';
 import PostUsers from '../../services/ServiceUsers/postUsers';
 import PutUser from '../../services/ServiceUsers/putUser';
 import GetIDUser from '../../services/ServiceUsers/getIDUser';
@@ -106,14 +105,17 @@ export default function UserRegistration({ id }) {
                 </div>
               </div>
               <div className="input-block">
-                <label htmlFor="user_status">Status</label>
-                <input id="Status" name="Status" onChange={onChange} value={values?.Status} />
+                <label htmlFor="user_status" for="status">Status</label>
+                <select htmlFor="user_status" name="status" id="Status" form="statusform">
+                  <option value={values?.Status === 1}>Ativo</option>
+                  <option value={values?.Status !== 1}>Inativo</option>
+                </select>
               </div>
 
             </fieldset>
             <button className="confirm-button" type="submit">
               Confirmar
-          </button>
+            </button>
           </form>
 
         </main>
