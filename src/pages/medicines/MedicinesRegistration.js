@@ -5,6 +5,8 @@ import '../../styles/pages/medicines/medicines-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
 import api from '../../services/api';
 import ContainerForm from "../../components/UI/container/containerForm";
+import deleteIcon from '../../images/deleteColor.png';
+import updateIcon from '../../images/refreshColor.png';
 
 const initialValue = {
   "IdUsuario": 0,
@@ -55,22 +57,32 @@ export default function MedicinesRegistration() {
                 <input id="Nome" name="Nome" onChange={onChange} />
               </div>
 
-              <div className="input-block">
-                <label htmlFor="tipo_medicamento">Tipo</label>
-                <input id="generico" type="radio" name="generico" />
-                <input type="radio" name="similar" />
-                <input type="radio" name="referencia" />
+              <div className="radio input-block">
+                <label htmlFor="tipo_medicamento" className="title">Tipo</label>
+                <div className="radio-medicines">
+                  <input id="generico" type="radio" name="generico" />
+                  <label>Genérico</label>
+                </div>
+                <div className="radio-medicines">
+                  <input type="radio" name="similar" />
+                  <label>Similar</label>
+                </div>
+                <div className="radio-medicines">
+                  <input type="radio" name="referencia" />
+                  <label>Referência</label>
+                </div>
               </div>
               <Link to="/cadastroApresentacao">
                 Adicionar Apresentação
-            </Link>
+              </Link>
               <Table striped bordered hover>
                 <thead>
                   <tr>
                     <th>Descrição</th>
                     <th>Dose</th>
                     <th>Unidade de Medida</th>
-                    <th> </th>
+                    <td className="bank-actions">  <Link to={`/editarApresentacao/` /*${apresentation.IdProfissional}*/}><img alt="Update" src={updateIcon} /></Link>  <button /*onClick={() => deleteApresentacao(apresentation.IdMedicamento)}*/><img alt="Delete" src={deleteIcon} /></button> </td>
+
                   </tr>
                 </thead>
                 <tbody>
@@ -79,12 +91,10 @@ export default function MedicinesRegistration() {
               </Table>
 
             </fieldset>
-            <button className="confirm-button cancel" type="submit">
-              Cancelar
-          </button>
-            <button className="confirm-button" type="submit">
-              Salvar
-          </button>
+            <div className="buttons-content">
+              <button className="edit-button delete">Cancelar</button>
+              <button className="edit-button" type="submit">Confirmar</button>
+            </div>
           </form>
 
         </main>

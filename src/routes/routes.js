@@ -4,6 +4,7 @@ import LoginPage from '../pages/login/Login';
 import Navbar from '../pages/nav/Nav';
 import CadastroMedicos from '../pages/medics/MedicRegistrationNew';
 import CadastroPacientes from '../pages/patients/PatientRegistration';
+import CadastroAlergias from '../pages/patients/allergies/AllergyRegistration';
 import CadastroUsuario from '../pages/users/UsersRegistration';
 import CadastroMedicamento from '../pages/medicines/MedicinesRegistration';
 import CadastroApresentacao from '../pages/medicines/apresentacao/ApresentacaoRegistration';
@@ -20,6 +21,7 @@ import EditarMedico from '../pages/medics/EditMedic';
 import EditarUsuario from '../pages/users/EditUser';
 import EditarProtocolo from '../pages/prescription/PrescriptionSuggestedRegistration';
 import EditarPaciente from '../pages/patients/EditPatient';
+import EditarAlergias from '../pages/patients/allergies/EditAllergy';
 
 function Routes() {
     return (
@@ -37,6 +39,8 @@ function Routes() {
                 <Route path="/cadastroPacientes" component={CadastroPacientes} />
                 <Route path="/listaPacientes" component={ListaPacientes} />
                 <Route path="/editarPaciente/:id" component={EditarPaciente} />
+                <Route path="/cadastroAlergia" component={CadastroAlergias} />
+                <Route path="/editarAlergia/:id" component={EditarAlergias} />
 
                 <Route path="/cadastroUsuarios" component={CadastroUsuario} />
                 <Route path="/listaUsuarios" component={ListaUsuarios} />

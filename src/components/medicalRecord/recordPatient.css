@@ -1,16 +1,61 @@
 .recordPatient-content{
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .recordPatient-content input{
     border-radius: 5px;
     border-width: 0.2px;
     /* border-color: #dcf2ff; */
 }
-.patient-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%;
+.patient-search {
+    display: flex;
+    flex-direction: row;
     margin-bottom: 50px;
+    margin-left: 0;
+    justify-content: space-between;
+}
+
+.patient-search .search-input{
+    width: 430px !important;
+    height: 45px;
+    border-radius: 15px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid #2D9CDB;
+    transform: rotate(-0.3deg);
+    color: #A3A3A3;
+}
+
+.btn-search{
+    margin-right: 16%;
+    border-radius: 9px;
+    margin-top: 0 !important;
+    background: #337AB7;
+    border-color: #2E6DA4;
+    width: 113px;
+    height: 36px;
+    line-height: 21px;
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(0.11deg);
+}
+
+.patient-content{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.patient-content input{
+    border: 0;
+}
+
+.allergy-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .item{
@@ -43,31 +88,53 @@
     
 }
 
-.allergy-content{
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    margin-right: 35px;
-}
-
-
-
 .allergy-content input{
     height: 25px;
     width: 150px;
     margin-bottom: 5px;
     margin-right: 10px;
+    text-align: center;
 }
 
 .measures-content{
     display: flex;
-    font-size: 1.5rem;
-    margin-left: 90px;
+    flex-direction: column;
 }
 
 .measures-content .measures-item{
     margin: 5px;
-    width: 150px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.measures-content label{
+    color: #6383C5;
+    font-size: 1.6rem;
+}
+
+.measures-content input{
+    width: 55px;
+    height: 26px;
+}
+
+.allergy-content p{
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    line-height: 34px;
+    color: #0096EC;
+    border-bottom: 1px solid #d3e2e5;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.measures-content p {
+    width: 100%;
+    font-size: 20px;
+    line-height: 34px;
+    color: #0096EC;
+    border-bottom: 1px solid #d3e2e5;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
 }

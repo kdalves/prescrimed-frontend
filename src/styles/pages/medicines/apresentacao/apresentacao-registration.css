@@ -18,30 +18,6 @@
     width: 70px;
   }
   
-  #page-create-apresentacao aside footer a,
-  #page-create-apresentacao aside footer button {
-    width: 48px;
-    height: 48px;
-  
-    border: 0;
-  
-    background: #12AFCB;
-    border-radius: 16px;
-  
-    cursor: pointer;
-  
-    transition: background-color 0.2s;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #page-create-apresentacao aside footer a:hover,
-  #page-create-apresentacao aside footer button:hover {
-    background: #17D6EB;
-  }
-  
   #page-create-apresentacao main {
     flex: 1;
   }
@@ -113,25 +89,19 @@
     padding: 0 16px;
   }
   
-  form.create-apresentacao-form .input-block textarea {
-    min-height: 120px;
-    max-height: 240px;
-    resize: vertical;
-    padding: 16px;
-    line-height: 28px;
-  }
-  
-  form.create-apresentacao-form button.confirm-button {
+ 
+  form.create-apresentacao-form button.edit-button {
     margin-top: 64px;
-  
-    width: 100%;
-    height: 64px;
+    
+    width: 50%;
+    height: 45px;
     border: 0;
     cursor: pointer;
     background: #337ab7;
     border-radius: 20px;
     color: #FFFFFF;
-    font-weight: 800;
+    font-weight: 600;
+
   
     display: flex;
     justify-content: center;
@@ -139,16 +109,31 @@
   
     transition: background-color 0.2s;
   }
+
+  form.create-apresentacao-form button.edit-button:last-child{
+    margin-left: 30px;
+  }
   
-  form.create-apresentacao-form button.confirm-button:hover {
+  form.create-apresentacao-form button.edit-button:hover {
     background: #2d86d4;
   }
 
-  form.create-apresentacao-form button.confirm-button.cancel {
-    background: #8a8a8a ;
+  form.create-apresentacao-form button.edit-button.delete {
+    background: #8a8a8a;
   }
 
-  form.create-apresentacao-form button.confirm-button.cancel:hover {
+  form.create-apresentacao-form button.edit-button.delte:hover {
     background:#6f6f6f;
   }
-  
+
+  form.create-apresentacao-form .input-block.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
+  }
+
+  form.create-apresentacao-form .input-block.flex input{
+    margin-bottom: 15px;
+  }
