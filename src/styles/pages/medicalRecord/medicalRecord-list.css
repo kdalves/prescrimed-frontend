@@ -21,6 +21,8 @@
   #page-show-medicalRecord main {
     flex: 1;
   }
+
+ 
   
   form.show-medicalRecord-form {
     background: #FFFFFF;
@@ -45,6 +47,10 @@
     width: 40px;
   }
 
+  form.show-medicalRecord-form fieldset .search-patient input{
+    width: 115px;
+  }
+
   
   form.show-medicalRecord-form fieldset + fieldset {
     margin-top: 80px;
@@ -55,7 +61,7 @@
   
     font-size: 32px;
     line-height: 34px;
-    color: #5C8599;
+    color: #0096EC;
     font-weight: 700;
   
     border-bottom: 1px solid #D3E2E5;

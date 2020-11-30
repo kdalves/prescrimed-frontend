@@ -16,10 +16,12 @@ export default function MedicalRecordList() {
                     <form className="show-medicalRecord-form">
                         <fieldset>
                             <legend>Prontuário do Paciente</legend>
+
                             <PatientInformation />
-                            <div className="search-patient">
+                            {/* <div className="search-patient">
+                                <input type="search" className="search-input" placeholder="Buscar paciente"></input>
                                 <a> <img src={loupe} /></a>
-                            </div>
+                            </div> */}
                         </fieldset>
                         <fieldset>
                             <legend>Prescrições</legend>
