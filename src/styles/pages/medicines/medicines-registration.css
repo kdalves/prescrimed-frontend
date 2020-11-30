@@ -107,7 +107,7 @@
     background: #8a8a8a;
   }
 
-  form.create-medicines-form button.edit-button.delte:hover {
+  form.create-medicines-form button.edit-button.delete:hover {
     background:#6f6f6f;
   }
 
@@ -138,4 +138,5 @@
     form.create-medicines-form .radio.input-block{
       margin-bottom: 24px;
     }
-  
+
+    

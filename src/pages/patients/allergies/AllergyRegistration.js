@@ -88,6 +88,4 @@ export default function AllergyRegistration({ id }) {
             </ContainerForm>
         </div>
     );
-
-
 }
