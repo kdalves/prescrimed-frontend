@@ -37,6 +37,7 @@ export default function MedicRegistrationNew({ id }) {
 
     const loadProfissionais = async (id) => {
       const response = await GetIDProfissionais(id);
+      console.log(response[0]);
       setValues(response[0]);
     }
 
@@ -57,12 +58,12 @@ export default function MedicRegistrationNew({ id }) {
 
       if (id) {
         putProfissionais(id, values)
-          .then((response) =>
+          .then(() =>
             history.push('/listaMedicos')
           );
       } else {
         postProfissionais(values)
-          .then((response) =>
+          .then(() =>
             history.push('/listaMedicos')
           );
       }

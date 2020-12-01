@@ -3,96 +3,65 @@ import './recordPatient.css';
 
 const RecordPatient = () => {
 
-    return(
-            <div className="recordPatient-content">
-                <div className="patient-grid">
-                    <div className="item"> 
-                        <p>Nome</p>
-                        <input /> 
+    return (
+        <div className="recordPatient-content">
+            <div className="patient-search">
+                <input className="search-input" />
+                <button className="btn btn-search">Buscar</button>
+            </div>
+            <div className="patient-content">
+                {/* <div className="information-content"> */}
+                <div className="measures-content">
+                    <p>Informações do Paciente</p>
+                    {/* <div className="item"> */}
+                    <div className="measures-item">
+                        <label>Nome</label>
+                        <input id="Nome" name="Nome" placeholder="João" disabled="disabled" /*onChange={onChange} value={values?.Nome} */ />
                     </div>
-                    <div className="item"> 
-                        <p>Sexo</p>
-                        <input /> 
+                    {/* <div className="item"> */}                    
+                    <div className="measures-item">
+                        <label>Nome Social</label>
+                        <input id="NomeSocial" name="NomeSocial" disabled="disabled" /*onChange={onChange} value={values?.NomeSocial} */ />
                     </div>
-                    <div className="item"> 
-                        <p>Fone</p>
-                        <input /> 
+                    {/* <div className="item"> */}                    
+                    <div className="measures-item">
+                        <label>Sexo</label>
+                        <input id="Sexo" name="Sexo" disabled="disabled" /*onChange={onChange} value={values?.Sexo}*/ />
                     </div>
-                    <div className="item"> 
-                        <p>Endereço</p>
-                        <input /> 
+                    {/* <div className="item"> */}                    
+                    <div className="measures-item">
+                        <label>Idade</label>
+                        <input id="Idade" name="Idade" disabled="disabled" /*onChange={onChange} value={values?.Idade}*/ />
                     </div>
-                    <div className="item"> 
-                        <p>CEP</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Nome Social</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Nascimento</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Responsável</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Complemento</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Cidade</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>CPF</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Naturalidade</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Fone Responsável</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>Bairro</p>
-                        <input /> 
-                    </div>
-                    <div className="item"> 
-                        <p>UF</p>
-                        <input /> 
+                    {/* <div className="item"> */}                    
+                    <div className="measures-item">
+                        <label>CPF</label>
+                        <input id="CPF" name="CPF" disabled="disabled"  /*onChange={onChange} value={values?.CPF} */ />
                     </div>
                 </div>
-                <div className="legends-footer">
+                <div className="allergy-content">
                     <p>Alergias</p>
-                    <p>Medidas Antropométricas</p>
+                    <div className="item">
+                        <input id="Alergias" name="Alergias" placeholder="Camarão" disabled="disabled"  /*onChange={onChange} value={values?.Alergias}*/ />
+                    </div>
                 </div>
-                <div className="patient-footer">
-                   <div className="allergy-content"> 
-                        <input />
-                        <input />
-                        <input /> 
-                    </div> 
-                    <div className="measures-content">
-                        <div className="measures-item"> 
-                            <p>Peso(kg)</p>
-                            <input /> 
-                        </div>
-                        <div className="measures-item"> 
-                            <p>Altura(cm)</p>
-                            <input /> 
-                        </div>
-                        <div className="measures-item"> 
-                            <p>Superfície Corporal</p>
-                            <input /> 
-                        </div>
+                <div className="measures-content">
+                    <p>Medidas Antropométricas</p>
+                    <div className="measures-item">
+                        <label>Peso (kg)</label>
+                        <input id="Peso" name="Peso" disabled="disabled" /*onChange={onChange} value={values?.Peso}*/ />
+                    </div>
+                    <div className="measures-item">
+                        <label>Altura (cm)</label>
+                        <input id="Altura" name="Altura" disabled="disabled"  /*onChange={onChange} value={values?.Altura}*/ />
+                    </div>
+                    <div className="measures-item">
+                        <label>Superfície Corporal</label>
+                        <input id="Superficie" name="Superficie" disabled="disabled"  /*onChange={onChange} value={values?.Superficie} */ />
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

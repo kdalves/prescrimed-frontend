@@ -40,12 +40,12 @@ export default function PatientRegistration({ id }) {
 
   const postPatient = async (value) => {
     const response = await PostPatient(value)
-    console.log(response);
+    console.log('postPatient', response);
   }
 
   const putPatient = async (id, value) => {
     const response = await PutPatient(id, value)
-    console.log(response);
+    console.log('putPatient:', response);
   }
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export default function PatientRegistration({ id }) {
         console.log('entrou no post', id);
         console.log('values', values);
         postPatient(values)
-        //.then((response) => history.push('/listaPacientes'));
+          .then((response) => history.push('/listaPacientes'))
       }
     } catch (error) {
       console.log('Houve algum problema', error);
@@ -107,12 +107,12 @@ export default function PatientRegistration({ id }) {
                 <input id="NomeSocial" name="NomeSocial" onChange={onChange} value={values?.NomeSocial} />
               </div>
               <div className="grid-names">
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="document">Documento</label>
                   <input id="Documento" name="Documento" onChange={onChange} value={values?.Documento} />
                 </div>
                 
-                <div className="input-block">
+                <div className="left input-block">
                   <label htmlFor="genero" for="Sexo">Setor</label>
                   <select htmlFor="genero" name="Sexo" id="Sexo" form="sexoform">
                     <option value={values?.Sexo === "M"}>Masculino</option>
@@ -120,12 +120,12 @@ export default function PatientRegistration({ id }) {
                   </select>
                 </div>
 
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="cpf">CPF</label>
                   <input id="CPF" name="CPF" onChange={onChange} value={values?.CPF} />
                 </div>
 
-                <div className="input-block">
+                <div className="left input-block">
                   <label htmlFor="nascimento">Nascimento</label>
                   <input id="Nascimento" name="Nascimento" onChange={onChange} value={values?.Nascimento} />
                 </div>
@@ -139,20 +139,23 @@ export default function PatientRegistration({ id }) {
             <fieldset>
               <legend>Medidas do Paciente</legend>
               <div className="inputs-measures" name="body_surfacex">
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="peso">Peso</label>
                   <input id="Peso" name="Peso" onChange={onChange} value={values?.Peso} />
                 </div>
 
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="altura">Altura</label>
                   <input id="Altura" name="Altura" onChange={onChange} value={values?.Altura} />
                 </div>
 
-                <div className="input-block">
+                <div id="block-superficie" className="input-block">
                   <label htmlFor="superficie">Superfície Corporal</label>
-                  <input id="Superficie" name="Superficie" value="" onChange={onChange} value={values?.Superficie} />
-                  <img className="calculeSurface" src={calcule} href="#" />
+                  <div className="calculate-super">
+                    <input id="Superficie" name="Superficie" value="" onChange={onChange} value={values?.Superficie} />
+                    <img className="calculeSurface" src={calcule} href="#" />
+                  </div>
+
                 </div>
               </div>
 
@@ -160,7 +163,7 @@ export default function PatientRegistration({ id }) {
 
             <fieldset>
               <legend>Alergias do Paciente</legend>
-              <Link to="/adicionarAlergia">Adicionar alergia</Link>
+              <Link to="/cadastroAlergia">Adicionar alergia</Link>
               <AllergySearch />
             </fieldset>
 
@@ -176,32 +179,32 @@ export default function PatientRegistration({ id }) {
                 <input id="Complemento" name="Complemento" onChange={onChange} value={values?.Complemento} />
               </div>
               <div className="grid-address">
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="cep">CEP</label>
                   <input id="Cep" name="Cep" onChange={onChange} value={values?.Cep} />
                 </div>
 
-                <div className="input-block">
+                <div className="left input-block">
                   <label htmlFor="bairro">Bairro</label>
                   <input id="Bairro" name="Bairro" onChange={onChange} value={values?.Bairro} />
                 </div>
 
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="cidade">Cidade</label>
                   <input id="Cidade" name="Cidade" onChange={onChange} value={values?.Cidade} />
                 </div>
 
-                <div className="input-block">
+                <div className="left input-block">
                   <label htmlFor="uf">UF</label>
                   <input id="UF" name="UF" onChange={onChange} value={values?.UF} />
                 </div>
 
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="fone">Fone</label>
                   <input id="Fone" name="Fone" onChange={onChange} value={values?.Fone} />
                 </div>
 
-                <div className="input-block">
+                <div className="left input-block">
                   <label htmlFor="foneCelular">Fone celular</label>
                   <input id="FoneCelular" name="FoneCelular" onChange={onChange} value={values?.FoneCelular} />
                 </div>
@@ -211,12 +214,12 @@ export default function PatientRegistration({ id }) {
             <fieldset>
               <legend>Informações do Responsável</legend>
               <div className="grid-responsible-info">
-                <div className="input-block">
+                <div className="right input-block">
                   <label htmlFor="responsibleName">Nome</label>
                   <input id="Responsavel" name="Responsavel" onChange={onChange} value={values?.Responsavel} />
                 </div>
 
-                <div className="input-block">
+                <div id="fone-responsavel" className="left input-block">
                   <label htmlFor="responsiblePhone">Fone</label>
                   <input id="FoneResponsavel" name="FoneResponsavel" onChange={onChange} value={values?.FoneResponsavel} />
                 </div>
@@ -224,13 +227,10 @@ export default function PatientRegistration({ id }) {
 
             </fieldset>
 
-            <button className="confirm-button" type="submit">
-              Confirmar
-            </button>
-
-            <button className="confirm-button cancel" type="submit">
-              Cancelar
-            </button>
+            <div className="buttons-content">
+              <button className="edit-button delete">Excluir</button>
+              <button className="edit-button" type="submit">Confirmar</button>
+            </div>
           </form>
         </main>
       </ContainerForm>

@@ -91,7 +91,15 @@
     margin-bottom: 40px;
     padding-bottom: 24px;
   }
-  
+
+  form.create-patient-form .left.input-block{
+    margin-left:10px;
+  }
+
+  form.create-patient-form .right.input-block{
+    margin-right:10px;
+  }
+
   form.create-patient-form .input-block + .input-block {
     margin-top: 24px;
   }
@@ -119,7 +127,7 @@
     outline: none;
     color: #5C8599;
   }
-  
+
   form.create-patient-form .input-block input {
     height: 40px;
     padding: 0 16px;
@@ -143,17 +151,18 @@
     color: #5C8599;
   }
   
-  form.create-patient-form button.confirm-button {
+  form.create-patient-form button.edit-button {
     margin-top: 64px;
-  
-    width: 100%;
-    height: 64px;
+    
+    width: 50%;
+    height: 45px;
     border: 0;
     cursor: pointer;
     background: #337ab7;
     border-radius: 20px;
     color: #FFFFFF;
-    font-weight: 800;
+    font-weight: 600;
+
   
     display: flex;
     justify-content: center;
@@ -161,15 +170,39 @@
   
     transition: background-color 0.2s;
   }
+
+  form.create-patient-form button.edit-button:last-child{
+    margin-left: 30px;
+  }
   
-  form.create-patient-form button.confirm-button:hover {
+  form.create-patient-form button.edit-button:hover {
     background: #2d86d4;
   }
 
-  form.create-patient-form button.confirm-button.cancel {
+  form.create-patient-form button.edit-button.delete {
     background: #8a8a8a;
   }
 
-  form.create-patient-form button.confirm-button.cancel:hover {
+  form.create-patient-form button.edit-button.delete:hover {
     background:#6f6f6f;
+  }
+
+  .names-content input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #fone-responsavel{
+    margin-top: 0;
+  }
+
+  .calculate-super{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .calculate-super img{
+    height: 24px;
   }

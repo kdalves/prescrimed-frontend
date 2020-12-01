@@ -11,7 +11,7 @@ const MedicalRecordPrescriptionList = ( {prescriptions }) => (
                     <th>Data</th>
                     <th>Médico Prescritor</th>
                     <th>Médico Assinante</th>
-                    <th>Data assinatura</th>
+                    <th>Data Assinatura</th>
                     <th></th>
                 </tr>
             </thead>
