@@ -102,18 +102,33 @@ export default function MedicRegistrationNew({ id }) {
               </div>
 
               <div className="input-block">
-                <label htmlFor="medico_categoria">Categoria</label>
-                <input id="IdCategoria" name="IdCategoria" onChange={onChange} value={values?.IdCategoria} />
+                <label htmlFor="medico_categoria" for="medico_categoria">Categoria</label>
+                <select htmlFor="medico_categoria" name="IdCategoria" id="IdCategoria" form="categoriaform">
+                  <option value={values?.IdCategoria === 1}>Médico</option>
+                  <option value={values?.IdCategoria === 2}>Enfermeiro</option>
+                  <option value={values?.IdCategoria === 3}>Farmacêutico</option>
+                  <option value={values?.IdCategoria === 4}>Recepcionista</option>
+                </select>
               </div>
 
               <div className="input-block">
-                <label htmlFor="medico_especialidade">Especialidade</label>
-                <input id="IdEspecialidade" name="IdEspecialidade" onChange={onChange} value={values?.IdEspecialidade} />
+                <label htmlFor="medico_especialidade" for="medico_categoria">Especialidade</label>
+                <select htmlFor="medico_especialidade" name="IdEspecialidade" id="IdEspecialidade" form="especialidadeform">
+                  <option value={values?.IdEspecialidade === 1}>Cirurgião</option>
+                  <option value={values?.IdEspecialidade === 2}>Psiquiatra</option>
+                  <option value={values?.IdEspecialidade === 3}>Dermatologista</option>
+                  <option value={values?.IdEspecialidade === 4}>Pediatra</option>
+                </select>
               </div>
 
               <div className="input-block">
-                <label htmlFor="medico_setor">Setor</label>
-                <input id="IdSetor" name="IdSetor" onChange={onChange} value={values?.IdSetor} />
+                <label htmlFor="medico_setor" for="medico_setor">Setor</label>
+                <select htmlFor="medico_setor" name="IdSetor" id="IdSetor" form="setorform">
+                  <option value={values?.IdSetor === 1}>Centro Cirurgico</option>
+                  <option value={values?.IdSetor === 2}>Psiquiatria</option>
+                  <option value={values?.IdSetor === 3}>Oncologia</option>
+                  <option value={values?.IdSetor === 4}>Pediatria</option>
+                </select>
               </div>
 
             </fieldset>

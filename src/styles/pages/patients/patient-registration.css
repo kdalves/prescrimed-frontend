@@ -140,6 +140,16 @@
     padding: 16px;
     line-height: 28px;
   }
+
+  form.create-patient-form .input-block select {
+    width: 100%;
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    padding: 10px 0 10px 30px;
+    border-radius: 15px;
+    outline: none;
+    color: #5C8599;
+  }
   
   form.create-patient-form button.edit-button {
     margin-top: 64px;

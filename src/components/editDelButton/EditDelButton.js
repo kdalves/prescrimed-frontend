@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 
+// import deleteIcon from '../../images/close.png';
+// import updateIcon from '../../images/edit-notebook.png';
 import deleteIcon from '../../images/close.png';
 import updateIcon from '../../images/edit-notebook.png';
 import DeleteProfissionais from '../../services/ServiceProfissionais/deleteProfissionais';

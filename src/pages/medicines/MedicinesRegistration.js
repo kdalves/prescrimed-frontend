@@ -5,8 +5,10 @@ import '../../styles/pages/medicines/medicines-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
 import api from '../../services/api';
 import ContainerForm from "../../components/UI/container/containerForm";
-import deleteIcon from '../../images/deleteColor.png';
-import updateIcon from '../../images/refreshColor.png';
+// import deleteIcon from '../../images/deleteColor.png';
+// import updateIcon from '../../images/refreshColor.png';
+import deleteIcon from '../../images/close.png';
+import updateIcon from '../../images/edit-notebook.png';
 
 const initialValue = {
   "IdUsuario": 0,

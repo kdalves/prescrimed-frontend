@@ -76,6 +76,16 @@
     outline: none;
     color: #5C8599;
   }
+
+  form.create-user-form .input-block select {
+    width: 20%;
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    padding-left: 30px;
+    border-radius: 15px;
+    outline: none;
+    color: #5C8599;
+  }
   
   form.create-user-form .input-block input {
     height: 40px;

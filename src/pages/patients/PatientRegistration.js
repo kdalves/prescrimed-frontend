@@ -111,10 +111,13 @@ export default function PatientRegistration({ id }) {
                   <label htmlFor="document">Documento</label>
                   <input id="Documento" name="Documento" onChange={onChange} value={values?.Documento} />
                 </div>
-
+                
                 <div className="left input-block">
-                  <label htmlFor="genero">Sexo</label>
-                  <input id="Sexo" name="Sexo" onChange={onChange} value={values?.Sexo} />
+                  <label htmlFor="genero" for="Sexo">Setor</label>
+                  <select htmlFor="genero" name="Sexo" id="Sexo" form="sexoform">
+                    <option value={values?.Sexo === "M"}>Masculino</option>
+                    <option value={values?.Sexo === "F"}>Feminino</option>
+                  </select>
                 </div>
 
                 <div className="right input-block">
