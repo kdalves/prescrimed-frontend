@@ -72,7 +72,7 @@ export default function UserRegistration({ id }) {
       setValues({ ...values, value });
     }
   }
-  console.log('values usuario: ', values);
+
   function onSubmit(event) {
     event.preventDefault(); //n aparecer dados no link
 
