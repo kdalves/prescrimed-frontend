@@ -18,7 +18,6 @@ const initialValue = {
   "IdCategoria": 0,
   "IdSetor": 0
 }
-console.log(initialValue.IdCategoria);
 
 export default function MedicRegistrationNew({ id }) {
 
@@ -34,7 +33,7 @@ export default function MedicRegistrationNew({ id }) {
 
   const putProfissionais = async (id, valor) => {
     const response = await PutProfissionais(id, valor)
-    console.log(response);
+    console.log('put medicos:', response);
   }
 
   useEffect(() => {

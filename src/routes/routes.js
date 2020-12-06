@@ -22,6 +22,7 @@ import EditarUsuario from '../pages/users/EditUser';
 import EditarProtocolo from '../pages/prescription/PrescriptionSuggestedRegistration';
 import EditarPaciente from '../pages/patients/EditPatient';
 import EditarAlergias from '../pages/patients/allergies/EditAllergy';
+import EditarApresentacao from '../pages/medicines/apresentacao/EditApresentacao';
 
 function Routes() {
     return (
@@ -52,6 +53,7 @@ function Routes() {
                 <Route path="/novoMedicamento" component={NovoMedicamento} />
 
                 <Route path="/cadastroApresentacao" component={CadastroApresentacao} />
+                <Route path="/editarApresentacao/:id" component={EditarApresentacao} />
 
                 <Route path="/cadastroProntuario" component={CadastroProntuario} />
                 <Route path="/prontuario" component={TelaProntuario} />

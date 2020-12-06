@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory, useParams } from "react-router-dom";
-import { Table } from 'react-bootstrap';
 import '../../styles/pages/medicines/medicines-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
 import api from '../../services/api';
 import ContainerForm from "../../components/UI/container/containerForm";
-// import deleteIcon from '../../images/deleteColor.png';
-// import updateIcon from '../../images/refreshColor.png';
-import deleteIcon from '../../images/close.png';
-import updateIcon from '../../images/edit-notebook.png';
+import ApresentacaoSearch from "../../components/search/medicine/apresentacao/apresentacaoSearch";
+import AddButton from '../../components/addButton/addButton';
 
 const initialValue = {
   "IdMedicamento": 0,
@@ -18,6 +15,7 @@ const initialValue = {
 
 export default function MedicinesRegistration() {
   const { goBack } = useHistory();
+  const { id } = useParams();
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
@@ -58,7 +56,7 @@ export default function MedicinesRegistration() {
         <main>
           <form className="create-medicines-form" onSubmit={onSubmit}>
             <fieldset>
-              <legend>Cadastro de Apresentações</legend>
+              <legend>Cadastro de Medicamento</legend>
 
               <div className="input-block">
                 <label htmlFor="nome_medicamento">Nome</label>
@@ -83,20 +81,8 @@ export default function MedicinesRegistration() {
               <Link to="/cadastroApresentacao">
                 Adicionar Apresentação
               </Link>
-              <Table striped bordered hover>
-                <thead>
-                  <tr>
-                    <th>Descrição</th>
-                    <th>Dose</th>
-                    <th>Unidade de Medida</th>
-                    <td className="bank-actions">  <Link to={`/editarApresentacao/` /*${apresentation.IdProfissional}*/}><img alt="Update" src={updateIcon} width="25px" /></Link>  <button /*onClick={() => deleteApresentacao(apresentation.IdMedicamento)}*/><img alt="Delete" src={deleteIcon} width="25px" /></button> </td>
-
-                  </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-              </Table>
+              <AddButton text="Adicionar Apresentação" route="cadastroApresentacao" />
+              <ApresentacaoSearch id={id} />
 
             </fieldset>
             <div className="buttons-content">
