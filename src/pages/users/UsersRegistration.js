@@ -53,6 +53,26 @@ export default function UserRegistration({ id }) {
     setValues({ ...values, [name]: value });
   }
 
+  function onChangeStatus(event) {
+    if (event.target.value === "ativo") {
+      const value = (values.Status = 1);
+      setValues({ ...values, value })
+    } else {
+      const value = (values.Status = 0);
+      setValues({ ...values, value });
+    }
+  }
+
+  function onChangeAdmin(event) {
+    if (event.target.value === "sim") {
+      const value = (values.Admin = 1);
+      setValues({ ...values, value })
+    } else {
+      const value = (values.Admin = 0);
+      setValues({ ...values, value });
+    }
+  }
+
   function onSubmit(event) {
     event.preventDefault(); //n aparecer dados no link
 
@@ -98,17 +118,20 @@ export default function UserRegistration({ id }) {
 
               <div className="input-block">
                 <label htmlFor="admin_status">Admin:</label>
-
-                <div className="button-select">
-                  <button type="button" className="active" id="Admin" name="Admin">Sim</button>
-                  <button type="button" id="Admin" name="Admin">Não</button>
-                </div>
+                {/* <div className="button-select">
+                  <button onChange={onChangeAdmin} value={true} type="button" className="active" id="Admin" name="Admin">Sim</button>
+                  <button onChange={onChangeAdmin} value={false} type="button" id="Admin" name="Admin">Não</button>
+                </div> */}
+                <select onChange={onChangeAdmin} htmlFor="user_admin" name="Admin" id="Admin" form="adminform">
+                  <option value={"sim"}>Sim</option>
+                  <option value={"nao"}>Não</option>
+                </select>
               </div>
               <div className="input-block">
                 <label htmlFor="user_status" for="status">Status</label>
-                <select htmlFor="user_status" name="status" id="Status" form="statusform">
-                  <option value={values?.Status === 1}>Ativo</option>
-                  <option value={values?.Status !== 1}>Inativo</option>
+                <select onChange={onChangeStatus} htmlFor="user_status" name="Status" id="Status" form="statusform">
+                  <option value={"ativo"}>Ativo</option>
+                  <option value={"inativo"}>Inativo</option>
                 </select>
               </div>
 

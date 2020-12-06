@@ -11,20 +11,13 @@ import deleteIcon from '../../images/close.png';
 import updateIcon from '../../images/edit-notebook.png';
 
 const initialValue = {
-  "IdUsuario": 0,
+  "IdMedicamento": 0,
   "Nome": "",
-  "CRM": "",
-  "CPF": "",
-  "Fone": "",
-  "Email": "",
-  "IdEspecialidade": 0,
-  "IdCategoria": 0,
-  "IdSetor": 0
+  "Tipo": ""
 }
 
 export default function MedicinesRegistration() {
   const { goBack } = useHistory();
-  const { id } = useParams();
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
@@ -33,6 +26,19 @@ export default function MedicinesRegistration() {
     const { name, value } = event.target;
 
     setValues({ ...values, [name]: value });
+  }
+
+  function onChangeTypes(event) {
+    if (event.target.value === "generico") {
+      const value = (values.Tipo = "generico");
+      setValues({ ...values, value });
+    } else if (event.target.value === "similar") {
+      const value = (values.Tipo = "similar");
+      setValues({ ...values, value });
+    } else if (event.target.value === "referencia") {
+      const value = (values.Tipo = "referencia");
+      setValues({ ...values, value });
+    }
   }
 
   function onSubmit(event) {
@@ -61,16 +67,16 @@ export default function MedicinesRegistration() {
 
               <div className="radio input-block">
                 <label htmlFor="tipo_medicamento" className="title">Tipo</label>
-                <div className="radio-medicines">
-                  <input id="generico" type="radio" name="generico" />
+                <div onChange={onChangeTypes} className="radio-medicines">
+                  <input id="generico" type="radio" name="Tipo" value={"generico"} />
                   <label>Genérico</label>
                 </div>
-                <div className="radio-medicines">
-                  <input type="radio" name="similar" />
+                <div onChange={onChangeTypes} className="radio-medicines">
+                  <input type="radio" name="Tipo" value={"similar"} />
                   <label>Similar</label>
                 </div>
-                <div className="radio-medicines">
-                  <input type="radio" name="referencia" />
+                <div onChange={onChangeTypes} className="radio-medicines">
+                  <input type="radio" name="Tipo" value={"referencia"} />
                   <label>Referência</label>
                 </div>
               </div>
@@ -83,7 +89,7 @@ export default function MedicinesRegistration() {
                     <th>Descrição</th>
                     <th>Dose</th>
                     <th>Unidade de Medida</th>
-                    <td className="bank-actions">  <Link to={`/editarApresentacao/` /*${apresentation.IdProfissional}*/}><img alt="Update" src={updateIcon} /></Link>  <button /*onClick={() => deleteApresentacao(apresentation.IdMedicamento)}*/><img alt="Delete" src={deleteIcon} /></button> </td>
+                    <td className="bank-actions">  <Link to={`/editarApresentacao/` /*${apresentation.IdProfissional}*/}><img alt="Update" src={updateIcon} width="25px" /></Link>  <button /*onClick={() => deleteApresentacao(apresentation.IdMedicamento)}*/><img alt="Delete" src={deleteIcon} width="25px" /></button> </td>
 
                   </tr>
                 </thead>
