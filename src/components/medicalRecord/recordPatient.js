@@ -1,5 +1,6 @@
 import React from 'react';
 import './recordPatient.css';
+import searchPatients from '../../images/loupe32.png';
 
 const RecordPatient = () => {
 
@@ -7,7 +8,9 @@ const RecordPatient = () => {
         <div className="recordPatient-content">
             <div className="patient-search">
                 <input className="search-input" />
-                <button className="btn btn-search">Buscar</button>
+                <button className="btn btn-search">
+                    <img src={searchPatients} />
+                </button>
             </div>
             <div className="patient-content">
                 {/* <div className="information-content"> */}
