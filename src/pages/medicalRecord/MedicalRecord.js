@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import axios from 'axios';
 import '../../styles/pages/medicalRecord/medicalRecord-registration.css';
 import Sidebar from '../../components/sidebar/Sidebar';
@@ -18,6 +18,7 @@ const initialValue = {
 export default function MedicalRecord() {
     const { id } = useParams();
     const [values, setValues] = useState(initialValue);
+    const { goBack } = useHistory();
     console.log(values);
 
     function onChange(event) {
@@ -76,12 +77,12 @@ export default function MedicalRecord() {
                         </fieldset>
 
                         <div className="buttons-content">
-                            <button className="confirm-button cancel" type="submit">
+                            <button className="confirm-button cancel" type="submit" onClick={goBack}>
                                 Voltar
-                        </button>
+                            </button>
                             <button className="confirm-button" type="submit">
                                 Salvar
-                        </button>
+                            </button>
                             <button className="confirm-button" type="submit">
                                 Salvar e Assinar
                         </button>
