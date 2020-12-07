@@ -7,7 +7,7 @@ const MedicList = ({ medics }) => (
     <UIContainer>
         <fieldset>
             <Table striped bordered hover>
-                <thead> 
+                <thead>
                     <tr>
                         <th>Nome</th>
                         <th>Categoria</th>

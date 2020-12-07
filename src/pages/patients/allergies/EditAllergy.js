@@ -4,7 +4,7 @@ import AllergyRegistration from './AllergyRegistration';
 
 const EditAllergy = () => {
     const { id } = useParams();
-    console.log('tela teste alergias' + id);
+    console.log('tela teste alergias    ' + id);
 
     return (
         <AllergyRegistration id={id} />

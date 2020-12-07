@@ -171,7 +171,7 @@ export default function PatientRegistration({ id }) {
             <fieldset>
               <legend>Alergias do Paciente</legend>
               <Link to="/cadastroAlergia">Adicionar alergia</Link>
-              <AllergySearch />
+              <AllergySearch id={id} />
             </fieldset>
 
             <fieldset>

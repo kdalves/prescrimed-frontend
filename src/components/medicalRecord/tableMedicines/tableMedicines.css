@@ -1,0 +1,13 @@
+.input-medic{
+    width: 100%;
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    border-radius: 15px;
+    outline: none;
+    color: #5C8599;
+    height: 40px;
+}
+
+thead tr th{
+   color: #6383C5 ;
+}

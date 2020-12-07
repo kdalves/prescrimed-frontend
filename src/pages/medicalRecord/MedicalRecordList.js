@@ -5,6 +5,7 @@ import PatientInformation from '../../components/medicalRecord/recordPatient';
 import MedicalRecordPrescriptionSearch from '../../components/search/medicalRecord/medicalRecordSearch';
 import loupe from '../../images/loupe64.png';
 import ContainerForm from "../../components/UI/container/containerForm";
+import AddButton from '../../components/addButton/addButton';
 
 export default function MedicalRecordList() {
     return (
@@ -26,6 +27,7 @@ export default function MedicalRecordList() {
                         <fieldset>
                             <legend>Prescrições</legend>
                             <div className="medical-prescription-content">
+                                <AddButton text="Prescrever " route="cadastroProntuario" />
                                 <MedicalRecordPrescriptionSearch />
                             </div>
                         </fieldset>

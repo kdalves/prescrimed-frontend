@@ -38,6 +38,5 @@ const MedicTableColumn = ({ medic }) => {
             <td className="bank-actions"><Link to={`/editarMedico/${medic.IdProfissional}`}><img alt="Update" src={updateIcon} width="25px" /></Link>  <button onClick={() => deleteProfissional(medic.IdProfissional)}><img alt="Delete" src={deleteIcon} width="20px" /></button> </td>
         </tr>
     );
-
 }
 export default MedicTableColumn;
