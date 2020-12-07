@@ -19,6 +19,7 @@ export default function UserRegistration({ id }) {
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
+  console.log('values:', values);
 
   const postUser = async (value) => {
     const response = await PostUsers(value);
@@ -54,23 +55,13 @@ export default function UserRegistration({ id }) {
   }
 
   function onChangeStatus(event) {
-    if (event.target.value === "ativo") {
-      const value = (values.Status = 1);
-      setValues({ ...values, value })
-    } else {
-      const value = (values.Status = 0);
-      setValues({ ...values, value });
-    }
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
   }
 
   function onChangeAdmin(event) {
-    if (event.target.value === "sim") {
-      const value = (values.Admin = 1);
-      setValues({ ...values, value })
-    } else {
-      const value = (values.Admin = 0);
-      setValues({ ...values, value });
-    }
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
   }
 
   function onSubmit(event) {
@@ -89,12 +80,6 @@ export default function UserRegistration({ id }) {
     } catch (error) {
       console.log('Houve algum problema', error);
     }
-
-
-    // api.post('/usuarios', values)
-    //   .then((response) => {
-    //     history.push('/listaUsuarios') 
-    //   });
   }
 
   return (
@@ -123,15 +108,15 @@ export default function UserRegistration({ id }) {
                   <button onChange={onChangeAdmin} value={false} type="button" id="Admin" name="Admin">Não</button>
                 </div> */}
                 <select onChange={onChangeAdmin} htmlFor="user_admin" name="Admin" id="Admin" form="adminform">
-                  <option value={"sim"}>Sim</option>
-                  <option value={"nao"}>Não</option>
+                  <option value={1}>Sim</option>
+                  <option value={0}>Não</option>
                 </select>
               </div>
               <div className="input-block">
                 <label htmlFor="user_status" for="status">Status</label>
                 <select onChange={onChangeStatus} htmlFor="user_status" name="Status" id="Status" form="statusform">
-                  <option value={"ativo"}>Ativo</option>
-                  <option value={"inativo"}>Inativo</option>
+                  <option value={1}>Ativo</option>
+                  <option value={0}>Inativo</option>
                 </select>
               </div>
 

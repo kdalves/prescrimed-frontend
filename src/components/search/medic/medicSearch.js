@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import '../../../styles/pages/users/users-registration.css';
 import MedicList from '../../medicList/MedicListComp';
 import GetProfissionais from "../../../services/ServiceProfissionais/getProfissionais";
 
-const MedicSearch = ({ id }) =>{  //NAO TINHA ESSE ID
+const MedicSearch = ({ id }) => {  //NAO TINHA ESSE ID
     const [medics, setMedics] = useState([]);
 
     const [search, setSearch] = useState("");
@@ -15,22 +15,22 @@ const MedicSearch = ({ id }) =>{  //NAO TINHA ESSE ID
 
     useEffect(() => {
         const params = {};
-        if(search){
-            params.Nome_like = search; 
+        if (search) {
+            params.Nome_like = search;
         }
 
-    //   api.get('/profissionais', { params }) 
-    //   .then( (response) => {
-    //     setMedics(response.data);
-    //   });
-    
-    getProfissionais(); // !!! ver se precisa de algum valor aqui !!!
-     
-    }, [search]); 
+        //   api.get('/profissionais', { params }) 
+        //   .then( (response) => {
+        //     setMedics(response.data);
+        //   });
 
-    return(
-        <div>  
-            <MedicList medics={medics}/>
+        getProfissionais(); // !!! ver se precisa de algum valor aqui !!!
+
+    }, [search]);
+
+    return (
+        <div>
+            <MedicList medics={medics} />
         </div>
     )
 }
