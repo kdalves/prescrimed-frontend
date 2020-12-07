@@ -95,8 +95,8 @@ export default function ApresentacaoRegistration({ id }) {
             </div>
           </fieldset>
           <div className="buttons-content">
-            <button className="edit-button delete">Cancelar</button>
-            <button className="edit-button" type="submit">Salvar</button>
+            <button className="edit-button delete">Voltar</button>
+            <button className="edit-button" type="submit">Confirmar</button>
           </div>
         </form>
 

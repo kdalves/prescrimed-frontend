@@ -121,9 +121,10 @@ export default function UserRegistration({ id }) {
               </div>
 
             </fieldset>
-            <button className="confirm-button" type="submit">
-              Confirmar
-            </button>
+            <div className="buttons-content">
+              <button className="edit-button delete">Voltar</button>
+              <button className="edit-button" type="submit">Confirmar</button>
+            </div>
           </form>
 
         </main>

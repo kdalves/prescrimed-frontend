@@ -77,7 +77,7 @@ export default function MedicalRecord() {
 
                         <div className="buttons-content">
                             <button className="confirm-button cancel" type="submit">
-                                Cancelar
+                                Voltar
                         </button>
                             <button className="confirm-button" type="submit">
                                 Salvar

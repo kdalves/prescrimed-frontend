@@ -1,11 +1,11 @@
 import React from 'react';
 import Sidebar from '../../components/sidebar/Sidebar';
-import  '../../styles/pages/prescription/prescription-suggested-registration.css';
+import '../../styles/pages/prescription/prescription-suggested-registration.css';
 import MedicinesSearch from '../../components/search/prescriptionDetails/prescriptionDetailsSearch';
 import ContainerForm from '../../components/UI/container/containerForm';
 
-export default function PrescriptionSuggestedRegistration(){
-    return(
+export default function PrescriptionSuggestedRegistration() {
+    return (
         <div id="page-create-prescription-regis">
             <Sidebar />
             <main>
@@ -16,27 +16,27 @@ export default function PrescriptionSuggestedRegistration(){
                             <div className="show-prescription-content">
                                 <div className="input-block">
                                     <p>Sigla</p>
-                                    <input/>
+                                    <input />
                                 </div>
                                 <div className="input-block">
                                     <p>Descrição</p>
-                                    <input/>
+                                    <input />
                                 </div>
                                 <div className="input-block">
                                     <p>Indicação</p>
-                                    <input/>
+                                    <input />
                                 </div>
-                            </div>  
+                            </div>
                         </fieldset>
                         <fieldset>
                             <MedicinesSearch />
                         </fieldset>
                         <div className="buttons-content">
-                            <button className="edit-button delete">Excluir</button>
-                            <button className="edit-button">Editar</button>
+                            <button className="edit-button delete">Voltar</button>
+                            <button className="edit-button">Confirmar</button>
                         </div>
-                        
-                </form> 
+
+                    </form>
                 </ContainerForm>
             </main>
         </div>

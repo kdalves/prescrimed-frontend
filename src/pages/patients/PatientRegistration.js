@@ -235,7 +235,7 @@ export default function PatientRegistration({ id }) {
             </fieldset>
 
             <div className="buttons-content">
-              <button className="edit-button delete">Excluir</button>
+              <button className="edit-button delete">Voltar</button>
               <button className="edit-button" type="submit">Confirmar</button>
             </div>
           </form>
