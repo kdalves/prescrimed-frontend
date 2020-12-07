@@ -9,6 +9,7 @@ import ContainerForm from "../../components/UI/container/containerForm";
 import PutPatient from '../../services/ServicePatients/putPatient';
 import PostPatient from '../../services/ServicePatients/postPatients';
 import GetIDPatient from '../../services/ServicePatients/getIDPatient';
+import { set } from "date-fns";
 
 const initialValue = {
   "Nome": "",
@@ -64,6 +65,12 @@ export default function PatientRegistration({ id }) {
     setValues({ ...values, [name]: value });
   }
 
+  function onChangeSex(event) {
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
+  }
+  console.log(values);
+
   function onSubmit(event) {
     event.preventDefault();
 
@@ -111,12 +118,12 @@ export default function PatientRegistration({ id }) {
                   <label htmlFor="document">Documento</label>
                   <input id="Documento" name="Documento" onChange={onChange} value={values?.Documento} />
                 </div>
-                
+
                 <div className="left input-block">
-                  <label htmlFor="genero" for="Sexo">Setor</label>
-                  <select htmlFor="genero" name="Sexo" id="Sexo" form="sexoform">
-                    <option value={values?.Sexo === "M"}>Masculino</option>
-                    <option value={values?.Sexo === "F"}>Feminino</option>
+                  <label htmlFor="sexo" for="Sexo">Setor</label>
+                  <select onChange={onChangeSex} htmlFor="sexo" name="Sexo" id="Sexo" form="sexoform">
+                    <option value={"M"}>Masculino</option>
+                    <option value={"F"}>Feminino</option>
                   </select>
                 </div>
 

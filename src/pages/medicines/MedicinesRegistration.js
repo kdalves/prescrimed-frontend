@@ -19,26 +19,17 @@ export default function MedicinesRegistration() {
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
-  console.log(values);
 
   function onChange(event) { //recebe um evento e captura um nome e valor do input
     const { name, value } = event.target;
-
     setValues({ ...values, [name]: value });
   }
 
   function onChangeTypes(event) {
-    if (event.target.value === "generico") {
-      const value = (values.Tipo = "generico");
-      setValues({ ...values, value });
-    } else if (event.target.value === "similar") {
-      const value = (values.Tipo = "similar");
-      setValues({ ...values, value });
-    } else if (event.target.value === "referencia") {
-      const value = (values.Tipo = "referencia");
-      setValues({ ...values, value });
-    }
+    const { name, value } = event.target;
+    setValues({ ...values, [name]: value });
   }
+  console.log(values);
 
   function onSubmit(event) {
     event.preventDefault(); //n aparecer dados no link
@@ -67,8 +58,8 @@ export default function MedicinesRegistration() {
               <div className="input-block">
                 <select onChange={onChangeTypes}
                   htmlFor="tipo_medicamento"
-                  name="IdMedicamento"
-                  id="IdMedicamento"
+                  name="Tipo"
+                  id="Tipo"
                   form="tipoform">
                   <option disable hidden value={""}>Selecione o tipo</option>
                   <option value={"generico"}>Genérico</option>
