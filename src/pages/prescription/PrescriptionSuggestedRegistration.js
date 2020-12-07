@@ -3,8 +3,10 @@ import Sidebar from '../../components/sidebar/Sidebar';
 import '../../styles/pages/prescription/prescription-suggested-registration.css';
 import MedicinesSearch from '../../components/search/prescriptionDetails/prescriptionDetailsSearch';
 import ContainerForm from '../../components/UI/container/containerForm';
+import { useHistory } from 'react-router-dom';
 
 export default function PrescriptionSuggestedRegistration() {
+    const { goBack } = useHistory();
     return (
         <div id="page-create-prescription-regis">
             <Sidebar />
@@ -32,7 +34,7 @@ export default function PrescriptionSuggestedRegistration() {
                             <MedicinesSearch />
                         </fieldset>
                         <div className="buttons-content">
-                            <button className="edit-button delete">Voltar</button>
+                            <button className="edit-button delete" onClick={goBack}>Voltar</button>
                             <button className="edit-button">Confirmar</button>
                         </div>
 

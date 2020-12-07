@@ -38,6 +38,7 @@ export default function PatientRegistration({ id }) {
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
+  const { goBack } = useHistory();
 
   const postPatient = async (value) => {
     const response = await PostPatient(value)
@@ -235,7 +236,7 @@ export default function PatientRegistration({ id }) {
             </fieldset>
 
             <div className="buttons-content">
-              <button className="edit-button delete">Voltar</button>
+              <button className="edit-button delete" onClick={goBack}>Voltar</button>
               <button className="edit-button" type="submit">Confirmar</button>
             </div>
           </form>
