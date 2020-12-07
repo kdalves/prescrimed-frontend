@@ -19,6 +19,7 @@ export default function MedicinesRegistration() {
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
+  console.log(values);
 
   function onChange(event) { //recebe um evento e captura um nome e valor do input
     const { name, value } = event.target;
@@ -63,24 +64,18 @@ export default function MedicinesRegistration() {
                 <input id="Nome" name="Nome" onChange={onChange} />
               </div>
 
-              <div className="radio input-block">
-                <label htmlFor="tipo_medicamento" className="title">Tipo</label>
-                <div onChange={onChangeTypes} className="radio-medicines">
-                  <input id="generico" type="radio" name="Tipo" value={"generico"} />
-                  <label>Genérico</label>
-                </div>
-                <div onChange={onChangeTypes} className="radio-medicines">
-                  <input type="radio" name="Tipo" value={"similar"} />
-                  <label>Similar</label>
-                </div>
-                <div onChange={onChangeTypes} className="radio-medicines">
-                  <input type="radio" name="Tipo" value={"referencia"} />
-                  <label>Referência</label>
-                </div>
+              <div className="input-block">
+                <select onChange={onChangeTypes}
+                  htmlFor="tipo_medicamento"
+                  name="IdMedicamento"
+                  id="IdMedicamento"
+                  form="tipoform">
+                  <option disable hidden value={""}>Selecione o tipo</option>
+                  <option value={"generico"}>Genérico</option>
+                  <option value={"similar"}>Similar</option>
+                  <option value={"referencia"}>Referência</option>
+                </select>
               </div>
-              <Link to="/cadastroApresentacao">
-                Adicionar Apresentação
-              </Link>
               <AddButton text="Adicionar Apresentação" route="cadastroApresentacao" />
               <ApresentacaoSearch id={id} />
 
