@@ -28,12 +28,13 @@ function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact component={LoginPage} />
-                <Route path="/menu" component={Navbar} />
+                {/* <Route path="/" exact component={LoginPage} /> */}
+                <Route path="/" exact component={Navbar} />
+                <Route path="/menu" exact component={Navbar} />
+
                 <Route path="/cadastroMedicos" component={CadastroMedicos} />
                 <Route path="/listaMedicos" component={ListaMedicos} />
                 <Route path="/editarMedico/:id" component={EditarMedico} />
-
                 <Route path="/cadastroMedicos/:id" component={CadastroMedicos} />
 
 

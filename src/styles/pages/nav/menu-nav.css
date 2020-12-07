@@ -28,6 +28,17 @@
     height: 70px;
 }
 
+.logo-content img{
+    height: 170px !important;
+}
+
+.logo-content{
+    width: 83%;
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+
 #page-nav p{
     line-height: 20px ;
     margin-top:10px;

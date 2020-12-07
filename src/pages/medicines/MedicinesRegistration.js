@@ -72,7 +72,7 @@ export default function MedicinesRegistration() {
 
             </fieldset>
             <div className="buttons-content">
-              <button className="edit-button delete">Cancelar</button>
+              <button className="edit-button delete" onClick={goBack}>Voltar</button>
               <button className="edit-button" type="submit">Confirmar</button>
             </div>
           </form>

@@ -19,6 +19,8 @@ export default function UserRegistration({ id }) {
 
   const [values, setValues] = useState(initialValue);
   const history = useHistory();
+  const { goBack } = useHistory();
+
   console.log('values:', values);
 
   const postUser = async (value) => {
@@ -121,9 +123,10 @@ export default function UserRegistration({ id }) {
               </div>
 
             </fieldset>
-            <button className="confirm-button" type="submit">
-              Confirmar
-            </button>
+            <div className="buttons-content">
+              <button className="edit-button delete" onClick={goBack}>Voltar</button>
+              <button className="edit-button" type="submit">Confirmar</button>
+            </div>
           </form>
 
         </main>

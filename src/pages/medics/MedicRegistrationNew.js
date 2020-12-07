@@ -25,6 +25,7 @@ export default function MedicRegistrationNew({ id }) {
   console.log('values: ', values);
 
   const history = useHistory();
+  const { goBack } = useHistory();
 
   const postProfissionais = async (valor) => {
     const response = await PostProfissionais(valor)
@@ -186,12 +187,12 @@ export default function MedicRegistrationNew({ id }) {
                   <option value={'pediatria'}>Pediatria</option>
                 </select>
               </div>
-
             </fieldset>
 
-            <button className="confirm-button" type="submit">
-              Confirmar
-          </button>
+            <div className="buttons-content">
+              <button className="edit-button delete" onClick={goBack}>Voltar</button>
+              <button className="edit-button" type="submit">Confirmar</button>
+            </div>
           </form>
 
         </main>

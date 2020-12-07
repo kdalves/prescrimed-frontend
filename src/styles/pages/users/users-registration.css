@@ -69,7 +69,7 @@
   
   form.create-user-form .input-block input,
   form.create-user-form .input-block textarea {
-    width: 50%;
+    width: 100%;
     background: #F5F8FA;
     border: 1px solid #D3E2E5;
     border-radius: 15px;
@@ -125,17 +125,18 @@
     width: 25%;
   }
   
-  form.create-user-form button.confirm-button {
+  form.create-user-form button.edit-button {
     margin-top: 64px;
-  
+    
     width: 50%;
-    height: 64px;
+    height: 45px;
     border: 0;
     cursor: pointer;
     background: #337ab7;
     border-radius: 20px;
     color: #FFFFFF;
-    font-weight: 800;
+    font-weight: 600;
+
   
     display: flex;
     justify-content: center;
@@ -143,12 +144,20 @@
   
     transition: background-color 0.2s;
   }
-  
-  form.create-user-form button.confirm-button svg {
-    margin-right: 16px;
+
+  form.create-user-form button.edit-button:last-child{
+    margin-left: 30px;
   }
   
-  form.create-user-form button.confirm-button:hover {
+  form.create-user-form button.edit-button:hover {
     background: #2d86d4;
+  }
+
+  form.create-user-form button.edit-button.delete {
+    background: #8a8a8a;
+  }
+
+  form.create-user-form button.edit-button.delete:hover {
+    background:#6f6f6f;
   }
   
