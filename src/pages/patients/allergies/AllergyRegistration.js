@@ -10,6 +10,7 @@ import api from '../../../services/api';
 
 const initialValue = {
     "IdPaciente": 0,
+    "IdAlergia": 0,
     "Alergia": ""
 }
 
@@ -17,6 +18,7 @@ export default function AllergyRegistration({ id }) {
 
     const [values, setValues] = useState(initialValue);
     const history = useHistory();
+    console.log(values);
 
     const postAllergy = async (valor) => {
         const response = await PostAllergy(valor)

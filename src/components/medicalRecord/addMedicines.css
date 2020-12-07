@@ -1,11 +1,27 @@
 .medicine-content{
     display: flex;
-    border-style: solid;
-    border-width: 2px ;
-    border-color: #D3E2E5;
-    padding: 30px;
-    padding-right: 10px;
-    padding-top: 15px;
+    padding: 15px;
+    flex-direction: column;
+}
+.posologia{
+    width: 523px;
+}
+#posologia{
+    width: 523px;
+}
+.medicine.input-block{
+    width: 83%;
+}
+
+.posologia.input-block{
+    width: 83%;
+}
+
+.inputs-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .loupe-content{

@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import AddButton from '../../components/addButton/addButton';
 
 export default function PatientList() {
-    const { id } = useParams();
+
     return (
         <div id="page-show-patient">
             <Sidebar />
@@ -17,7 +17,7 @@ export default function PatientList() {
                         <fieldset>
                             <legend>Pacientes</legend>
                             <AddButton text="Adicionar Paciente " route="cadastroPacientes" />
-                            <PatientSearch id={id} />
+                            <PatientSearch />
                         </fieldset>
                     </form>
                 </main>

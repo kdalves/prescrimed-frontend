@@ -12,8 +12,9 @@ const AllergyTableColumn = ({ allergy }) => {
     return (
         <tr>
             <td>{allergy.Alergia}</td>
-            <td className="bank-actions"><Link to={`/editarAlergia/${allergy.IdPaciente}`}><img src={updateIcon}  width="25px" /></Link></td>
-            <td className="bank-actions"><button onClick={() => deleteAllergy(allergy.IdPaciente)}><img src={deleteIcon}  width="20px" /></button> </td>
+            <td className="bank-actions"><Link to={`/editarAlergia/${allergy.IdAlergia}`}><img src={updateIcon} width="25px" /></Link>
+                <button onClick={() => deleteAllergy(allergy.IdAlergia)}><img src={deleteIcon} width="20px" /></button>
+            </td>
         </tr>
     );
 }
