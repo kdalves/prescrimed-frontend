@@ -54,7 +54,7 @@ const RecordPatient = () => {
                     </div>
                     <div className="measures-item">
                         <label>Superfície Corporal</label>
-                        <input className="input-measures" placeholder="250" id="Superficie" name="Superficie" disabled="disabled"  /*onChange={onChange} value={values?.Superficie} */ />
+                        <input className="input-measures" placeholder="1.81" id="Superficie" name="Superficie" disabled="disabled"  /*onChange={onChange} value={values?.Superficie} */ />
                     </div>
                 </div>
             </div>

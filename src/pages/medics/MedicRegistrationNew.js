@@ -6,7 +6,7 @@ import GetIDProfissionais from "../../services/ServiceProfissionais/getIDProfiss
 import PostProfissionais from "../../services/ServiceProfissionais/postProfissionais";
 import PutProfissionais from "../../services/ServiceProfissionais/putProfissionais";
 import ContainerForm from "../../components/UI/container/containerForm";
-import { Multiselect } from 'multiselect-react-dropdown';
+// import { Multiselect } from 'multiselect-react-dropdown';
 
 const initialValue = {
   "IdProfissional": 0,

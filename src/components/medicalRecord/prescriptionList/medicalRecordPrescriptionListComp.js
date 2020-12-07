@@ -13,6 +13,7 @@ const MedicalRecordPrescriptionList = ( {prescriptions }) => (
                     <th>Médico Assinante</th>
                     <th>Data Assinatura</th>
                     <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
