@@ -2,6 +2,7 @@ import React from 'react';
 import ColumnUpdateRemove from '../../tableComponents/columnUpdateRemove';
 import Buttons from '../../editDelButton/EditDelButton';
 import formattedDate from '../../../utils/formattedDate';
+// import getNameProfissional from '../../../utils/getNameProfissional';
 import { Link } from 'react-router-dom';
 import pdfIcon from '../../../images/pdf.png';
 // import deleteIcon from '../../../images/close.png';
@@ -13,6 +14,7 @@ const MedicalRecordColumn = ( { prescription }) => {
         <tr>
             <td>{prescription.Identificacao}</td>
             <td>{formattedDate(prescription.Data)}</td>
+            {/* <td>{getNameProfissional(prescription.IdProfissional)}</td> */}
             <td>{prescription.IdProfissional}</td>
             <td>{prescription.IdProfissional}</td>
             <td>{formattedDate(prescription.DataAssinatura)}</td>
