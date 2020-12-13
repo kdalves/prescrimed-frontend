@@ -123,8 +123,8 @@ export default function PatientRegistration({ id }) {
                 <div className="left input-block">
                   <label htmlFor="sexo" for="Sexo">Sexo</label>
                   <select onChange={onChangeSex} htmlFor="sexo" name="Sexo" id="Sexo" form="sexoform">
-                    <option value={values?.Sexo === "M"}>Masculino</option>
                     <option value={values?.Sexo === "F"}>Feminino</option>
+                    <option value={values?.Sexo === "M"}>Masculino</option>
                   </select>
                 </div>
 
