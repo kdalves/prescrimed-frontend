@@ -62,6 +62,18 @@ function Routes() {
                 <Route path="/cadastroPrescricaoSugerida" component={CadastroPrescricaoSugerida} />
                 <Route path="/listaPrescricoesSugeridas" component={ListaPrescricoesSugeridas} />
                 <Route path='/editarPrescricaoSugerida/:id' component={EditarProtocolo} />
+
+
+
+
+
+
+
+
+
+
+
+
             </Switch>
         </BrowserRouter>
     );
