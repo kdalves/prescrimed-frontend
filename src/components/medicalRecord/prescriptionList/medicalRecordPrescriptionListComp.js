@@ -2,8 +2,8 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import MedicalRecordColumn from './medicalRecordTableColumn';
 
+// const MedicalRecordPrescriptionList = ( {prescriptions, patients }) => (
 const MedicalRecordPrescriptionList = ( {prescriptions }) => (
-
         <Table striped bordered hover>
             <thead>
                 <tr>
@@ -18,7 +18,8 @@ const MedicalRecordPrescriptionList = ( {prescriptions }) => (
             </thead>
             <tbody>
                 {prescriptions.map((prescription) => (
-                    <MedicalRecordColumn prescription={prescription} />
+                    // <MedicalRecordColumn prescription={prescription}  patients={patients} />
+                    <MedicalRecordColumn prescription={prescription}/>
                 ))}
             </tbody>
         </Table>
