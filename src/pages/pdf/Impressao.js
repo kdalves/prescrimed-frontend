@@ -44,7 +44,7 @@ export class Impressao {
           fontSize: 10,
           margin: [0, 10, 0, 0],
          },
-        { text: `Obs.: ${medication.Posologia}`, 
+        { text: `Posologia: ${medication.Posologia}`, 
           fontSize: 10,
           margin: [0, 10, 0, 0],
         },
