@@ -2,11 +2,11 @@ export const data = [
     {
       Nome: "Paracetamol - 750mg ",
       Via: "Oral",
-      Posologia: "Se estiver febril",
+      Posologia: "2 vezes ao dia",
     },
     {
-      Nome: "Plasil - 10mg ",
+      Nome: "Dorflex - Gotas 20ml ",
       Via: "Oral",
-      Posologia: "Imediatamente após vomitar (caso aconteça)",
+      Posologia: "Em caso de dor",
     },
   ];
