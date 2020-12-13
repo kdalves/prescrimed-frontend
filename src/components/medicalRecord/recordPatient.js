@@ -19,27 +19,27 @@ const RecordPatient = () => {
                     {/* <div className="item"> */}
                     <div className="measures-item">
                         <label>Nome</label>
-                        <input id="Nome" name="Nome" placeholder="João" disabled="disabled" /*onChange={onChange} value={values?.Nome} */ />
+                        <input id="Nome" name="Nome" placeholder="Mikaela Barbosa" disabled="disabled" /*onChange={onChange} value={values?.Nome} */ />
                     </div>
                     {/* <div className="item"> */}
                     <div className="measures-item">
                         <label>Nome Social</label>
-                        <input placeholder="Joaozinho" id="NomeSocial" name="NomeSocial" disabled="disabled" /*onChange={onChange} value={values?.NomeSocial} */ />
+                        <input placeholder="Mikaela" id="NomeSocial" name="NomeSocial" disabled="disabled" /*onChange={onChange} value={values?.NomeSocial} */ />
                     </div>
                     {/* <div className="item"> */}
                     <div className="measures-item">
                         <label>Sexo</label>
-                        <input placeholder="Masculino" id="Sexo" name="Sexo" disabled="disabled" /*onChange={onChange} value={values?.Sexo}*/ />
+                        <input placeholder="Feminino" id="Sexo" name="Sexo" disabled="disabled" /*onChange={onChange} value={values?.Sexo}*/ />
                     </div>
                     {/* <div className="item"> */}
                     <div className="measures-item">
                         <label>Idade</label>
-                        <input placeholder="20" id="Idade" name="Idade" disabled="disabled" /*onChange={onChange} value={values?.Idade}*/ />
+                        <input placeholder="18" id="Idade" name="Idade" disabled="disabled" /*onChange={onChange} value={values?.Idade}*/ />
                     </div>
                     {/* <div className="item"> */}
                     <div className="measures-item">
                         <label>CPF</label>
-                        <input placeholder="87633269856" id="CPF" name="CPF" disabled="disabled"  /*onChange={onChange} value={values?.CPF} */ />
+                        <input placeholder="595.836.790-03" id="CPF" name="CPF" disabled="disabled"  /*onChange={onChange} value={values?.CPF} */ />
                     </div>
                 </div>
                 <div className="measures-content">
@@ -50,18 +50,18 @@ const RecordPatient = () => {
                     </div>
                     <div className="measures-item">
                         <label>Altura (cm)</label>
-                        <input className="input-measures" placeholder="1.70m" id="Altura" name="Altura" disabled="disabled"  /*onChange={onChange} value={values?.Altura}*/ />
+                        <input className="input-measures" placeholder="1.60m" id="Altura" name="Altura" disabled="disabled"  /*onChange={onChange} value={values?.Altura}*/ />
                     </div>
                     <div className="measures-item">
                         <label>Superfície Corporal</label>
-                        <input className="input-measures" placeholder="1.81" id="Superficie" name="Superficie" disabled="disabled"  /*onChange={onChange} value={values?.Superficie} */ />
+                        <input className="input-measures" placeholder="1.73" id="Superficie" name="Superficie" disabled="disabled"  /*onChange={onChange} value={values?.Superficie} */ />
                     </div>
                 </div>
             </div>
             <div className="allergy-content">
                 <p>Alergias</p>
                 <div className="item">
-                    <input id="Alergias" name="Alergias" placeholder="Camarão" disabled="disabled"  /*onChange={onChange} value={values?.Alergias}*/ />
+                    <input id="Alergias" name="Alergias" placeholder="Dipirona" disabled="disabled"  /*onChange={onChange} value={values?.Alergias}*/ />
                 </div>
             </div>
         </div>
