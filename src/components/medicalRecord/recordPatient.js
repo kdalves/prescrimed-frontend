@@ -3,7 +3,7 @@ import "./recordPatient.css";
 import searchPatients from "../../images/loupe32.png";
 import { SearchContext } from "../../contexts/searchContext";
 import GetPatients from "../../services/ServicePatients/getPatients";
-import { RecordPatientModal } from "../modals/recordPatientModal./recordPatientModal";
+import { RecordPatientModal } from "../modals/recordPatientModal/recordPatientModal";
 
 const RecordPatient = () => {
   const [searchTerm, setSearchTerm] = useState("");
