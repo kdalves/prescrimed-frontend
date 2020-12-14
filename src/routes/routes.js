@@ -23,58 +23,56 @@ import EditarProtocolo from '../pages/prescription/PrescriptionSuggestedRegistra
 import EditarPaciente from '../pages/patients/EditPatient';
 import EditarAlergias from '../pages/patients/allergies/EditAllergy';
 import EditarApresentacao from '../pages/medicines/apresentacao/EditApresentacao';
+import EditarProntuario from '../pages/medicalRecord/EditMedicalRecord';
+import SearchContextProvider from '../contexts/searchContext';
 
 function Routes() {
     return (
         <BrowserRouter>
-            <Switch>
-                {/* <Route path="/" exact component={LoginPage} /> */}
-                <Route path="/" exact component={Navbar} />
-                <Route path="/menu" exact component={Navbar} />
+            <SearchContextProvider>
+                <Switch>
+                    {/* <Route path="/" exact component={LoginPage} /> */}
+                    <Route path="/" exact component={Navbar} />
+                    <Route path="/menu" exact component={Navbar} />
 
-                <Route path="/cadastroMedicos" component={CadastroMedicos} />
-                <Route path="/listaMedicos" component={ListaMedicos} />
-                <Route path="/editarMedico/:id" component={EditarMedico} />
-                <Route path="/cadastroMedicos/:id" component={CadastroMedicos} />
-
-
-                <Route path="/cadastroPacientes" component={CadastroPacientes} />
-                <Route path="/listaPacientes" component={ListaPacientes} />
-                <Route path="/editarPaciente/:id" component={EditarPaciente} />
-                <Route path="/cadastroAlergia" component={CadastroAlergias} />
-                <Route path="/editarAlergia/:id" component={EditarAlergias} />
-
-                <Route path="/cadastroUsuarios" component={CadastroUsuario} />
-                <Route path="/listaUsuarios" component={ListaUsuarios} />
-                <Route path="/editarUsuario/:id" component={EditarUsuario} />
+                    <Route path="/cadastroMedicos" component={CadastroMedicos} />
+                    <Route path="/listaMedicos" component={ListaMedicos} />
+                    <Route path="/editarMedico/:id" component={EditarMedico} />
+                    <Route path="/cadastroMedicos/:id" component={CadastroMedicos} />
 
 
-                <Route path="/cadastroMedicamentos" component={CadastroMedicamento} />
-                <Route path="/listaMedicamentos" component={ListaMedicamentos} />
-                <Route path="/novoMedicamento" component={NovoMedicamento} />
+                    <Route path="/cadastroPacientes" component={CadastroPacientes} />
+                    <Route path="/listaPacientes" component={ListaPacientes} />
+                    <Route path="/editarPaciente/:id" component={EditarPaciente} />
+                    <Route path="/cadastroAlergia" component={CadastroAlergias} />
+                    <Route path="/editarAlergia/:id" component={EditarAlergias} />
 
-                <Route path="/cadastroApresentacao" component={CadastroApresentacao} />
-                <Route path="/editarApresentacao/:id" component={EditarApresentacao} />
-
-                <Route path="/cadastroProntuario" component={CadastroProntuario} />
-                <Route path="/prontuario" component={TelaProntuario} />
-
-                <Route path="/cadastroPrescricaoSugerida" component={CadastroPrescricaoSugerida} />
-                <Route path="/listaPrescricoesSugeridas" component={ListaPrescricoesSugeridas} />
-                <Route path='/editarPrescricaoSugerida/:id' component={EditarProtocolo} />
+                    <Route path="/cadastroUsuarios" component={CadastroUsuario} />
+                    <Route path="/listaUsuarios" component={ListaUsuarios} />
+                    <Route path="/editarUsuario/:id" component={EditarUsuario} />
 
 
+                    <Route path="/cadastroMedicamentos" component={CadastroMedicamento} />
+                    <Route path="/listaMedicamentos" component={ListaMedicamentos} />
+                    <Route path="/novoMedicamento" component={NovoMedicamento} />
 
+                    <Route path="/cadastroApresentacao" component={CadastroApresentacao} />
+                    <Route path="/editarApresentacao/:id" component={EditarApresentacao} />
 
+                    <Route path="/cadastroProntuario" component={CadastroProntuario} />
+                    <Route path="/prontuario" component={TelaProntuario} />
+                    <Route path="/editarProntuario/:id" component={EditarProntuario} />
+
+                    <Route path="/cadastroPrescricaoSugerida" component={CadastroPrescricaoSugerida} />
+                    <Route path="/listaPrescricoesSugeridas" component={ListaPrescricoesSugeridas} />
+                    <Route path='/editarPrescricaoSugerida/:id' component={EditarProtocolo} />
 
 
 
 
 
-
-
-
-            </Switch>
+                </Switch>
+            </SearchContextProvider>
         </BrowserRouter>
     );
 }
