@@ -1,8 +1,8 @@
 export const paciente = [
     {
-        Nome: "Mikaela",
-        Idade: "24",
-        Peso: "60",
-        Altura: "1,67"
+        Nome: "Mikaela Barbosa",
+        Idade: "18 anos",
+        Peso: "70 kg",
+        Altura: "1,60m"
     }
 ];
