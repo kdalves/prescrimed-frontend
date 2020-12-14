@@ -40,7 +40,6 @@ function Routes() {
                     <Route path="/editarMedico/:id" component={EditarMedico} />
                     <Route path="/cadastroMedicos/:id" component={CadastroMedicos} />
 
-
                     <Route path="/cadastroPacientes" component={CadastroPacientes} />
                     <Route path="/listaPacientes" component={ListaPacientes} />
                     <Route path="/editarPaciente/:id" component={EditarPaciente} />
@@ -50,7 +49,6 @@ function Routes() {
                     <Route path="/cadastroUsuarios" component={CadastroUsuario} />
                     <Route path="/listaUsuarios" component={ListaUsuarios} />
                     <Route path="/editarUsuario/:id" component={EditarUsuario} />
-
 
                     <Route path="/cadastroMedicamentos" component={CadastroMedicamento} />
                     <Route path="/listaMedicamentos" component={ListaMedicamentos} />
@@ -66,11 +64,6 @@ function Routes() {
                     <Route path="/cadastroPrescricaoSugerida" component={CadastroPrescricaoSugerida} />
                     <Route path="/listaPrescricoesSugeridas" component={ListaPrescricoesSugeridas} />
                     <Route path='/editarPrescricaoSugerida/:id' component={EditarProtocolo} />
-
-
-
-
-
                 </Switch>
             </SearchContextProvider>
         </BrowserRouter>
