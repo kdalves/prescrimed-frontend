@@ -13,15 +13,13 @@
 }
 
 #page-nav aside{
-   width: 150px;
    background-color: #DCF2FF;
-   padding: 80px;
-
+   padding: 32px 24px;
+   height: 100%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
    align-items: center;
-
 }
 
 #page-nav img{
