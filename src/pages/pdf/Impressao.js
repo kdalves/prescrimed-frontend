@@ -40,7 +40,7 @@ export class Impressao {
     const body = this.dadosParaImpressao.map((medication) => {
       return [
         { 
-          text:` ${medication.Nome} (${medication.Via})`,
+          text:` ${medication.Nome} ${medication.Via}`,
           fontSize: 10,
           margin: [0, 10, 0, 0],
          },
