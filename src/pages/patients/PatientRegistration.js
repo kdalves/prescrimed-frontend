@@ -70,7 +70,7 @@ export default function PatientRegistration({ id }) {
     const { name, value } = event.target;
     setValues({ ...values, [name]: value });
   }
-  console.log(values);
+  console.log('values paciente', values);
 
   function onSubmit(event) {
     event.preventDefault();
@@ -80,11 +80,11 @@ export default function PatientRegistration({ id }) {
       if (id) {
         putPatient(id, values)
           .then((response) => history.push('/listaPacientes'));
+        console.log('put');
       } else {
-        console.log('entrou no post', id);
-        console.log('values', values);
         postPatient(values)
           .then((response) => history.push('/listaPacientes'))
+          .catch((error) => console.log('Erro: ', error));
       }
     } catch (error) {
       console.log('Houve algum problema', error);
@@ -232,7 +232,6 @@ export default function PatientRegistration({ id }) {
                   <input id="FoneResponsavel" name="FoneResponsavel" onChange={onChange} value={values?.FoneResponsavel} />
                 </div>
               </div>
-
             </fieldset>
 
             <div className="buttons-content">

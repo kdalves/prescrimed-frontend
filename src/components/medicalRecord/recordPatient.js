@@ -1,71 +1,172 @@
-import React from 'react';
-import './recordPatient.css';
-import searchPatients from '../../images/loupe32.png';
+import React, { useContext, useEffect, useState } from "react";
+import "./recordPatient.css";
+import searchPatients from "../../images/loupe32.png";
+import { SearchContext } from "../../contexts/searchContext";
+import GetPatients from "../../services/ServicePatients/getPatients";
+import { RecordPatientModal } from "../modals/recordPatientModal./recordPatientModal";
 
 const RecordPatient = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [patients, setPatients] = useState([]);
+  const [isModalVisible, setModalVisible] = useState(false);
+  const { search, newSearch } = useContext(SearchContext);
+  console.log('pacientes', patients);
 
-    return (
-        <div className="recordPatient-content">
-            <div className="patient-search">
-                <input className="search-input" />
-                <button className="btn btn-search">
-                    <img src={searchPatients} />
-                </button>
+  const getPatients = async () => {
+    const response = await GetPatients();
+    setPatients(response);
+  };
+
+  const userFiltered = patients.filter((user) => user.Nome == search);
+
+  const handleChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  const onClickSearch = () => {
+    newSearch(searchTerm);
+    getPatients();
+  };
+
+  return (
+    <div className="recordPatient-content">
+      <div className="patient-search">
+        <input
+          className="search-input"
+          onChange={handleChange}
+          value={searchTerm}
+        />
+        <button
+          type="button"
+          className="btn btn-search"
+          onClick={onClickSearch} // BUSCA: onClickSearch || MODAL: () => setModalVisible(true)
+        >
+          <img src={searchPatients} />
+        </button>
+        {isModalVisible ? (
+          <RecordPatientModal onClose={() => setModalVisible(false)} />
+        ) : null}
+      </div>
+
+      <div>
+        <div className="patient-content">
+          {/* <div className="information-content"> */}
+          <div className="measures-content patient">
+            <p>Informações do Paciente</p>
+            {/* <div className="item"> */}
+            <div className="measures-item">
+              <label>Nome</label>
+              {userFiltered.map((user) => (
+                <input
+                  id="Nome"
+                  name="Nome"
+                  value={user.Nome}
+                  disabled="disabled"
+                />
+              ))}
             </div>
-            <div className="patient-content">
-                {/* <div className="information-content"> */}
-                <div className="measures-content patient">
-                    <p>Informações do Paciente</p>
-                    {/* <div className="item"> */}
-                    <div className="measures-item">
-                        <label>Nome</label>
-                        <input id="Nome" name="Nome" placeholder="Mikaela Barbosa" disabled="disabled" /*onChange={onChange} value={values?.Nome} */ />
-                    </div>
-                    {/* <div className="item"> */}
-                    <div className="measures-item">
-                        <label>Nome Social</label>
-                        <input placeholder="Mikaela" id="NomeSocial" name="NomeSocial" disabled="disabled" /*onChange={onChange} value={values?.NomeSocial} */ />
-                    </div>
-                    {/* <div className="item"> */}
-                    <div className="measures-item">
-                        <label>Sexo</label>
-                        <input placeholder="Feminino" id="Sexo" name="Sexo" disabled="disabled" /*onChange={onChange} value={values?.Sexo}*/ />
-                    </div>
-                    {/* <div className="item"> */}
-                    <div className="measures-item">
-                        <label>Idade</label>
-                        <input placeholder="18" id="Idade" name="Idade" disabled="disabled" /*onChange={onChange} value={values?.Idade}*/ />
-                    </div>
-                    {/* <div className="item"> */}
-                    <div className="measures-item">
-                        <label>CPF</label>
-                        <input placeholder="595.836.790-03" id="CPF" name="CPF" disabled="disabled"  /*onChange={onChange} value={values?.CPF} */ />
-                    </div>
-                </div>
-                <div className="measures-content">
-                    <p>Medidas Antropométricas</p>
-                    <div className="measures-item">
-                        <label>Peso (kg)</label>
-                        <input className="input-measures" placeholder="70kg" id="Peso" name="Peso" disabled="disabled" /*onChange={onChange} value={values?.Peso}*/ />
-                    </div>
-                    <div className="measures-item">
-                        <label>Altura (cm)</label>
-                        <input className="input-measures" placeholder="1.60m" id="Altura" name="Altura" disabled="disabled"  /*onChange={onChange} value={values?.Altura}*/ />
-                    </div>
-                    <div className="measures-item">
-                        <label>Superfície Corporal</label>
-                        <input className="input-measures" placeholder="1.73" id="Superficie" name="Superficie" disabled="disabled"  /*onChange={onChange} value={values?.Superficie} */ />
-                    </div>
-                </div>
+            {/* <div className="item"> */}
+            <div className="measures-item">
+              <label>Nome Social</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.NomeSocial}
+                  id="NomeSocial"
+                  name="NomeSocial"
+                  disabled="disabled" /*onChange={onChange} value={values?.NomeSocial} */
+                />
+              ))}
             </div>
-            <div className="allergy-content">
-                <p>Alergias</p>
-                <div className="item">
-                    <input id="Alergias" name="Alergias" placeholder="Dipirona" disabled="disabled"  /*onChange={onChange} value={values?.Alergias}*/ />
-                </div>
+            {/* <div className="item"> */}
+            <div className="measures-item">
+              <label>Sexo</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.Sexo}
+                  id="Sexo"
+                  name="Sexo"
+                  disabled="disabled" /*onChange={onChange} value={values?.Sexo}*/
+                />
+              ))}
             </div>
+            {/* <div className="item"> */}
+            <div className="measures-item">
+              <label>Idade</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.Nascimento}
+                  id="Nascimento"
+                  name="Nascimento"
+                  disabled="disabled" /*onChange={onChange} value={values?.Idade}*/
+                />
+              ))}
+            </div>
+            {/* <div className="item"> */}
+            <div className="measures-item">
+              <label>CPF</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.CPF}
+                  id="CPF"
+                  name="CPF"
+                  disabled="disabled" /*onChange={onChange} value={values?.CPF} */
+                />
+              ))}
+            </div>
+          </div>
+          <div className="measures-content">
+            <p>Medidas Antropométricas</p>
+            <div className="measures-item">
+              <label>Peso (kg)</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.Peso}
+                  className="input-measures"
+                  id="Peso"
+                  name="Peso"
+                  disabled="disabled" /*onChange={onChange} value={values?.Peso}*/
+                />
+              ))}
+            </div>
+            <div className="measures-item">
+              <label>Altura (cm)</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.Altura}
+                  className="input-measures"
+                  id="Altura"
+                  name="Altura"
+                  disabled="disabled" /*onChange={onChange} value={values?.Altura}*/
+                />
+              ))}
+            </div>
+            <div className="measures-item">
+              <label>Superfície Corporal</label>
+              {userFiltered.map((user) => (
+                <input
+                  value={user.Superficie}
+                  className="input-measures"
+                  id="Superficie"
+                  name="Superficie"
+                  disabled="disabled" /*onChange={onChange} value={values?.Superficie} */
+                />
+              ))}
+            </div>
+          </div>
         </div>
-    )
-}
+        <div className="allergy-content">
+          <p>Alergias</p>
+          <div className="item">
+            <input
+              id="Alergias"
+              name="Alergias"
+              disabled="disabled" /*onChange={onChange} value={values?.Alergias}*/
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default RecordPatient;

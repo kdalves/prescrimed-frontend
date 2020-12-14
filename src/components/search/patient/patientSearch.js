@@ -9,9 +9,10 @@ const PatientSearch = () => {
 
     const [search, setSearch] = useState("");
 
-    const getPatients = async (valor) => {
-        const response = await GetPatients(valor);
-        setPatients(response.data);
+    const getPatients = async () => {
+        const response = await GetPatients();
+        console.log(response.filter(user => user.Nome == 'Lucas Reis'));
+        setPatients(response);
     }
 
     useEffect(() => {
