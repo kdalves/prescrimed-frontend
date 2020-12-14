@@ -24,7 +24,15 @@ const TableMedicines = ({ presentations }) => (
                                 <img className="exclue-icon" width="25px" height="25px" src={exclueIcon} />
                             </a>
                         </td>
-
+                    </tr>
+                    <tr>
+                        <td>Dorflex 20ml</td>
+                        <td>Em caso de dor</td>
+                        <td>
+                            <a className="exclue-medicine">
+                                <img className="exclue-icon" width="25px" height="25px" src={exclueIcon} />
+                            </a>
+                        </td>
                     </tr>
 
                 </tbody>
